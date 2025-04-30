@@ -1,1 +1,65 @@
 /*CSS*/
+.header {
+    position: sticky;
+    top: 0; /* ¡Esto es obligatorio! */
+    z-index: 1000;/* Opcional, para que esté por encima de otros elementos */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    background-color: #111; /* Reasegura el fondo al hacer scroll */
+}
+
+.Daniel-p {
+    font-weight: bold;
+    color: gold;
+}
+.navbar-brand{
+    color: white;
+}
+.background-inicio {
+    width: 100%;
+    height: 42em;
+    background-image: url(../IMG/unity-6.jpg);
+    background-repeat: no-repeat;
+    /* la imagen no se repite*/
+    background-size: cover;
+    /* Hace que la imagen cubra todo el contenedor */
+    background-position: center;
+    /* Centra la imagen para evitar cortes raros */
+}
+
+.titulo-p {
+    text-align: center;
+    padding: 3em;
+}
+
+.carousel-inner img {
+    height: 400px;
+    object-fit: cover;
+}
+
+.ver-info {
+    text-decoration: none;
+    color: white;
+}
+
+.proyectos-conteiner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.card {
+    justify-content: center;
+}
+a, button {
+    transition: all 0.3s ease;
+}
+.navbar-nav .nav-item a{
+    color: white;
+}
+.img-container img {
+    border-radius: 50%;
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+}
