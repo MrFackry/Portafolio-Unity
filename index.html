@@ -12,12 +12,13 @@
     <link rel="stylesheet" href="./STYLESCSS/Style.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
     <title>Portafolio Daniel</title>
 </head>
 
 <body>
-
     <header class="header">
         <nav class="navbar navbar-expand-sm navbar">
             <!--menu de navegacion-->
@@ -26,6 +27,9 @@
                 <ul class="navbar-nav">
                     <li class="nav-item">
                         <a class="nav-link" aria-current="page" href="#proyectos">Proyectos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#prototipos">prototipos</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#sobre-mi">Sobre mi</a>
@@ -39,12 +43,11 @@
     </header>
 
     <main>
-
         <!--secci0n proyectos -->
-        <section>
-            <div class="background-inicio"></div>
-            <h1 id="proyectos" class="titulo-p">Mis Proyectos</h1>
-            <!--contenido de los proyectos -->
+        <section class="seccion">
+            <div class="background-inicio">
+                <h1 class="titulo-i">Software Developer</h1>
+            </div>
             <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-indicators">
                     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
@@ -56,7 +59,7 @@
                 </div>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img src="./IMG/Captura de pantalla 2025-02-17 160309.png" class="d-block w-100" alt="">
+                        <img src="./IMG/0.1.0-alpha.png" class="d-block w-100" alt="">
                         <div class="carousel-caption d-none d-md-block">
                             <a class="ver-info" href="">Ver info</a>
                         </div>
@@ -85,59 +88,94 @@
                     <span class="visually-hidden">Next</span>
                 </button>
             </div>
+            <h1 id="proyectos" class="titulo-p">Mis Proyectos</h1>
+            <!--contenido de los proyectos -->
             <!--card-->
             <div class="proyectos-conteiner">
                 <div class="card" style="width: 18rem;">
-                    <img src="..." class="card-img-top" alt="...">
+                    <img src="./IMG/0.1.0-alpha.png" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the card's content.</p>
+                        <p class="card-text">
+                            Rol:Game designer
+                        </p>
+                        <p>estoy programado y diseñando un juego que va a contar con dos modos uno single player y
+                            otro multijugador local, actual mente solo cuenta con el primer modo que es un endless
+                            runner
+                        </p>
+                        <button type="button" class="btn btn-success" id="button"><a href="https://fackry.itch.io/avion-prototipo">probar</a></button>
                     </div>
                 </div>
             </div>
+            <section class="seccion" id="prototipos">
+                <h2 id="prototipos">Prototipos</h2>
+                <div class="proyectos-conteiner">
+                    <div class="card" style="width: 18rem;">
+                        <img src="./IMG/Prototipo-futboll.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="card-text">
+                                Rol:Game designer
+                            </p>
+                            <p>prototipo para probar movimento y probar mecanicas 
+                            </p>
+                            <button type="button" class="btn btn-success" id="button"><a href="https://fackry.itch.io/futball-balls">probar</a></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="proyectos-conteiner">
+                    <div class="card" style="width: 18rem;">
+                        <img src="./IMG/Prototipo-Globo.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="card-text">
+                                Rol:Game designer
+                            </p>
+                            <p>prototipo emulando un flaply brid</p>
+                            <button type="button" class="btn btn-success" id="button"><a href="https://fackry.itch.io/globo-basic">probar</a></button>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </section>
 
         <!--seccion informacion personal -->
-        <section id="sobre-mi">
+        <section class="seccion" id="sobre-mi">
             <h2>Sobre Mí</h2>
-            <!--descripcion, experiencia o habilidades -->
-            <div class="container">
-                <div class="row">
-                    <div class="col">
-                        <div class="img-container">
-                            <img src="./IMG/Captura de pantalla 2024-12-26 165943.png" alt="">
-                        </div>
+
+            <div class="container-informacion">
+                <div class="info-principal">
+                    <div class="img-container">
+                        <img src="./IMG/Captura de pantalla 2024-12-26 165943.png" alt="Mi foto">
                     </div>
-                    <div class="col">
-                        <div class="text-container">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum perferendis distinctio nam
-                                placeat velit corporis, officiis vero beatae ea sunt praesentium quas cumque nihil, unde
-                                rem ipsum, officia qui a.</p>
-                        </div>
+                    <div class="text-container">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum perferendis distinctio nam
+                            placeat velit corporis, officiis vero beatae ea sunt praesentium quas cumque nihil, unde
+                            rem ipsum, officia qui a.</p>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col">
-                        <div class="Habilidades">
-                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquid saepe architecto
-                                praesentium sit voluptates veniam molestias possimus nostrum, modi est nulla vero
-                                dignissimos commodi ea cumque similique ullam dolores? Molestias!</p>
-                        </div>
-                    </div>
+
+                <div class="habilidades">
+                    <h3>Habilidades</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquid saepe architecto
+                        praesentium sit voluptates veniam molestias possimus nostrum, modi est nulla vero
+                        dignissimos commodi ea cumque similique ullam dolores? Molestias!</p>
                 </div>
             </div>
         </section>
+
+
     </main>
 
-    <footer id="contacto" class="">
-        <div class="container">
-            <div class="row">
-                <div class="col">
-                    <p>&copy; 2025 Daniel. Todos los derechos reservados.</p>
-                </div>
-                <div class="col">
-                    <p>s</p>
-                </div>
+    <footer id="contacto" class="footer">
+        <div class="container-footer">
+            <div class="contacto">
+                <a href="https://github.com/MrFackry" target="_blank">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/daniel-arcos-desarollador-videojuegos/" target="_blank">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+            </div>
+            <div class="copy">
+                <p>&copy; 2025 Daniel. Todos los derechos reservados.</p>
             </div>
         </div>
     </footer>
