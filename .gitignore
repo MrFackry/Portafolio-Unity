@@ -16,3 +16,9 @@ _site/
 # counterproductive to check this file into the repository.
 # Details at https://github.com/github/pages-gem/issues/768
 Gemfile.lock
+#archivos .json
+data/temp/*.json
+output/*.json     
+# Ignora toda la carpeta node_modules    
+node_modules/  
+
