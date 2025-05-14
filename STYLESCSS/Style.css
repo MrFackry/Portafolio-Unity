@@ -2,42 +2,57 @@
 /*-------------------------
 GENERALES
 -------------------------*/
-a, button {
+a,
+button {
     transition: all 0.3s ease;
 }
-h2{
+
+h2 {
     text-align: center;
     padding: 3em;
 }
-#button a{
+
+#button a {
     text-decoration: none;
     color: white;
 }
+
+.fade-out-on-scroll:not(.aos-animate) {
+    opacity: 0;
+}
+
 /*-------------------------
 HEADER
 -------------------------*/
 .header {
     position: sticky;
-    top: 0; /* ¡Esto es obligatorio! */
-    z-index: 1000;/* Opcional, para que esté por encima de otros elementos */
+    top: 0;
+    /* ¡Esto es obligatorio! */
+    z-index: 1000;
+    /* Opcional, para que esté por encima de otros elementos */
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-    background-color: #111; /* Reasegura el fondo al hacer scroll */
+    background-color: #111;
+    /* Reasegura el fondo al hacer scroll */
 }
 
 .Daniel-p {
     font-weight: bold;
     color: gold;
 }
-.navbar-brand{
+
+.navbar-brand {
     color: white;
 }
+
 /*-------------------------
 CONTENIDO
 -------------------------*/
 .background-inicio {
     position: relative;
-    height: 100vh; /* altura de toda la ventana */
-    background-image: url('../IMG/unity-6.jpg'); /* usa tu imagen real */
+    height: 100vh;
+    /* altura de toda la ventana */
+    background-image: url('../IMG/unity-6.jpg');
+    /* usa tu imagen real */
     background-size: cover;
     background-position: center;
     display: flex;
@@ -45,7 +60,8 @@ CONTENIDO
     justify-content: center;
     align-items: center;
 }
-.titulo-i{
+
+.titulo-i {
     display: flex;
     width: auto;
     padding: 1em 2em;
@@ -68,9 +84,11 @@ CONTENIDO
     text-align: center;
     padding: 3em;
 }
-.carousel{
+
+.carousel {
     padding-top: 3em;
 }
+
 .carousel-inner img {
     height: 400px;
     object-fit: cover;
@@ -89,12 +107,28 @@ CONTENIDO
 }
 
 .card {
-    justify-content: center;
+  width: 18rem;
+  display: flex;
+  flex-direction: column;
+  height: 450px; 
 }
 
-.navbar-nav .nav-item a{
-    color: white;
+.card-img-top {
+  height: 300px; 
+  width: 100%;
+  object-fit: contain; 
+  background-color: #f0f0f0; 
 }
+
+.card-body {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+
 /*-------------------------
 seccion infromacion
 -------------------------*/
@@ -130,7 +164,7 @@ seccion infromacion
     width: 250px;
     max-width: 100%;
     border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .text-container {
@@ -141,6 +175,7 @@ seccion infromacion
     font-size: 1.1rem;
     line-height: 1.6;
 }
+
 .tecnologias-tabla {
     display: flex;
     justify-content: center;
@@ -150,7 +185,8 @@ seccion infromacion
     padding: 30px;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    flex-wrap: wrap; /* por si la pantalla es pequeña */
+    flex-wrap: wrap;
+    /* por si la pantalla es pequeña */
 }
 
 .columna {
@@ -179,6 +215,7 @@ seccion infromacion
     font-size: 0.95rem;
     justify-content: center;
 }
+
 .item i {
     font-size: 1.2rem;
     color: #555;
@@ -190,9 +227,12 @@ FOOTER
 .footer {
     background-color: aqua;
     display: flex;
-    justify-content: center; /* Centra horizontalmente */
-    align-items: center;     /* Centra verticalmente */
-    flex-direction: column;  /* Apila contenido */
+    justify-content: center;
+    /* Centra horizontalmente */
+    align-items: center;
+    /* Centra verticalmente */
+    flex-direction: column;
+    /* Apila contenido */
     padding: 20px;
 }
 

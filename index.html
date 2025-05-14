@@ -2,55 +2,61 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--CEO-->
-    <meta name="description" content="Portafolio de Daniel Arcos, desarrollador web.">
-    <meta name="keywords" content="portafolio, desarrollador web, proyectos, HTML, CSS, JavaScript, Daniel,Arcos">
-    <!--BOOTSTRAP-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="./STYLESCSS/Style.css">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-    <!-- FONT AWESOME -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- SEO -->
+    <meta name="description" content="Portafolio de Daniel Arcos, desarrollador web." />
+    <meta name="keywords" content="portafolio, desarrollador web, proyectos, HTML, CSS, JavaScript, Daniel, Arcos" />
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./STYLESCSS/Style.css" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
     <!-- AOS CSS -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <title>Portafolio Daniel</title>
 </head>
 
 <body>
     <header class="header">
-        <nav class="navbar navbar-expand-sm navbar">
-            <!--menu de navegacion-->
+        <nav class="navbar navbar-expand-sm navbar-light bg-light">
             <div class="container-fluid">
-                <h1 class="navbar-brand"> <span class="Daniel-p">Daniel</span> Arcos</h1>
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="#proyectos">Proyectos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="#prototipos">prototipos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#sobre-mi">Sobre mi</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contacto">Informacion</a>
-                    </li>
-                </ul>
+                <h1 class="navbar-brand">
+                    <span class="Daniel-p">Daniel</span> Arcos
+                </h1>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#proyectos">Proyectos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#prototipos">Prototipos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#sobre-mi">Sobre mí</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contacto">Información</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </nav>
     </header>
 
     <main>
-        <!--secci0n proyectos -->
+        <!-- Sección Inicio -->
         <section class="seccion">
-            <div class="background-inicio">
+            <div class="background-inicio text-center py-5" data-aos="fade-down">
                 <h1 class="titulo-i">Software Developer</h1>
             </div>
-            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+
+            <!-- Carousel con animación en fade -->
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" data-aos="fade-up">
                 <div class="carousel-indicators">
                     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
                         class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -61,153 +67,150 @@
                 </div>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img src="./IMG/0.1.0-alpha.png" class="d-block w-100" alt="">
+                        <img src="./IMG/0.1.0-alpha.png" class="d-block w-100" alt="Proyecto 1" />
                         <div class="carousel-caption d-none d-md-block">
-                            <a class="ver-info" href="">Ver info</a>
+                            <a class="ver-info btn btn-primary" href="#">Ver info</a>
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <img src="./IMG/Captura de pantalla 2025-02-17 160427.png" class="d-block w-100" alt="">
+                        <img src="./IMG/Captura de pantalla 2025-02-17 160427.png" class="d-block w-100"
+                            alt="Proyecto 2" />
                         <div class="carousel-caption d-none d-md-block">
-                            <a class="ver-info" href="">Ver info</a>
+                            <a class="ver-info btn btn-primary" href="#">Ver info</a>
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <img src="..." class="d-block w-100" alt="...">
+                        <img src="..." class="d-block w-100" alt="Proyecto 3" />
                         <div class="carousel-caption d-none d-md-block">
-                            <a class="ver-info" href="">Ver info</a>
+                            <a class="ver-info btn btn-primary" href="#">Ver info</a>
                         </div>
                     </div>
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
                     data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
+                    <span class="visually-hidden">Anterior</span>
                 </button>
                 <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
                     data-bs-slide="next">
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
+                    <span class="visually-hidden">Siguiente</span>
                 </button>
             </div>
-            <h1 id="proyectos" class="titulo-p">Mis Proyectos</h1>
-            <!--contenido de los proyectos -->
-            <!--card-->
-            <div class="proyectos-conteiner">
-                <div class="card" style="width: 18rem;">
-                    <img src="./IMG/0.1.0-alpha.png" class="card-img-top" alt="...">
+
+            <!-- Proyectos -->
+            <h2 id="proyectos" class="mt-5 mb-4 text-center" data-aos="fade-up">Mis Proyectos</h2>
+            <div class="container proyectos-conteiner d-flex justify-content-center flex-wrap gap-4">
+                <div class="card" style="width: 18rem;" data-aos="zoom-in">
+                    <img src="./IMG/0.1.0-alpha.png" class="card-img-top" alt="Proyecto 1" />
                     <div class="card-body">
-                        <p class="card-text">
-                            Rol:Game designer
+                        <p class="card-text fw-bold">Rol: Game designer</p>
+                        <p>
+                            Estoy programando y diseñando un juego que contará con dos modos: single player y
+                            multijugador local. Actualmente solo tiene el modo endless runner.
                         </p>
-                        <p>estoy programado y diseñando un juego que va a contar con dos modos uno single player y
-                            otro multijugador local, actual mente solo cuenta con el primer modo que es un endless
-                            runner
-                        </p>
-                        <button type="button" class="btn btn-success" id="button"><a
-                                href="https://fackry.itch.io/avion-prototipo">probar</a></button>
+                        <a href="https://fackry.itch.io/avion-prototipo" target="_blank"
+                            class="btn btn-success">Probar</a>
                     </div>
                 </div>
             </div>
-            <section class="seccion" id="prototipos">
-                <h2 id="prototipos">Prototipos</h2>
-                <div class="proyectos-conteiner">
-                    <div class="card" style="width: 18rem;">
-                        <img src="./IMG/Prototipo-futboll.png" class="card-img-top" alt="...">
+
+            <!-- Prototipos -->
+            <section id="prototipos" class="my-5">
+                <h2 class="text-center mb-4" data-aos="fade-up">Prototipos</h2>
+                <div class="container proyectos-conteiner d-flex justify-content-center flex-wrap gap-4">
+                    <div class="card" style="width: 18rem;" data-aos="fade-up" data-aos-delay="100">
+                        <img src="./IMG/Prototipo-futboll.png" class="card-img-top" alt="Prototipo fútbol" />
                         <div class="card-body">
-                            <p class="card-text">
-                                Rol:Game designer
-                            </p>
-                            <p>prototipo para probar movimento y probar mecanicas
-                            </p>
-                            <button type="button" class="btn btn-success" id="button"><a
-                                    href="https://fackry.itch.io/futball-balls">probar</a></button>
+                            <p class="card-text fw-bold">Rol: Game designer</p>
+                            <p>Prototipo para probar movimiento y mecánicas.</p>
+                            <a href="https://fackry.itch.io/futball-balls" target="_blank"
+                                class="btn btn-success">Probar</a>
                         </div>
                     </div>
-                </div>
-                <div class="proyectos-conteiner">
-                    <div class="card" style="width: 18rem;">
-                        <img src="./IMG/Prototipo-Globo.png" class="card-img-top" alt="...">
+                    <div class="card" style="width: 18rem;" data-aos="fade-up" data-aos-delay="100">
+                        <img src="./IMG/Prototipo-Globo.png" class="card-img-top" alt="Prototipo globo" />
                         <div class="card-body">
-                            <p class="card-text">
-                                Rol:Game designer
-                            </p>
-                            <p>prototipo emulando un flaply brid</p>
-                            <button type="button" class="btn btn-success" id="button"><a
-                                    href="https://fackry.itch.io/globo-basic">probar</a></button>
+                            <p class="card-text fw-bold">Rol: Game designer</p>
+                            <p>Prototipo emulando un Flappy Bird.</p>
+                            <a href="https://fackry.itch.io/globo-basic" target="_blank" class="btn btn-success">Probar</a>
                         </div>
                     </div>
                 </div>
             </section>
         </section>
 
-        <!--seccion informacion personal -->
-        <section class="seccion" id="sobre-mi">
-            <h2>Sobre Mí</h2>
-
-            <div class="container-informacion">
-                <div class="info-principal">
-                    <div class="img-container">
-                        <img src="./IMG/Captura de pantalla 2024-12-26 165943.png" alt="Mi foto">
+        <!-- Sobre mí -->
+        <section id="sobre-mi" class="seccion my-5">
+            <h2 class="text-center mb-4" data-aos="fade-up">Sobre Mí</h2>
+            <div class="container-informacion container d-flex flex-wrap justify-content-center align-items-center gap-4">
+                <div class="info-principal d-flex flex-column flex-md-row align-items-center gap-4" data-aos="zoom-in-up">
+                    <div class="img-container flex-shrink-0">
+                        <img src="./IMG/Captura de pantalla 2024-12-26 165943.png" alt="Foto Daniel" class="img-fluid rounded" />
                     </div>
                     <div class="text-container">
-                        <p>Soy estudiante de Tecnología en Programación de Sistemas Informáticos, con una fuerte
+                        <p>
+                            Soy estudiante de Tecnología en Programación de Sistemas Informáticos, con una fuerte
                             inclinación hacia el desarrollo backend y una pasión especial por la creación de videojuegos
                             en Unity. Disfruto construir soluciones de software que resuelvan problemas reales y aporten
-                            valor, trabajando con tecnologías como Java, C#, Node.js y JavaScript.</p>
+                            valor, trabajando con tecnologías como Java, C#, Node.js y JavaScript.
+                        </p>
                     </div>
                 </div>
 
-                <div class="tecnologias-tabla">
-                    <div class="columna">
+                <div class="tecnologias-tabla d-flex justify-content-around flex-wrap gap-3 mt-4" data-aos="fade-left">
+                    <div class="columna text-center">
                         <h4>Lenguajes</h4>
                         <div class="item"><i class="fab fa-java"></i> Java</div>
                         <div class="item"><i class="fab fa-js"></i> JavaScript</div>
                         <div class="item"><i class="fas fa-code"></i> C#</div>
                     </div>
-                    <div class="columna">
+                    <div class="columna text-center">
                         <h4>Bases de Datos</h4>
                         <div class="item"><i class="fas fa-database"></i> MySQL</div>
                     </div>
-                    <div class="columna">
+                    <div class="columna text-center">
                         <h4>Control de Versiones</h4>
                         <div class="item"><i class="fab fa-github"></i> GitHub</div>
                     </div>
-                    <div class="columna">
+                    <div class="columna text-center">
                         <h4>Frameworks</h4>
                         <div class="item"><i class="fas fa-project-diagram"></i> Spring</div>
                         <div class="item"><i class="fab fa-node-js"></i> Node.js</div>
                     </div>
-                    <div class="columna">
-                        <h4>Entornos</h4>
-                        <div class="item"><i class="fas fa-gamepad"></i> Unity</div>
-                        <div class="item"><i class="fas fa-edit"></i> VS Code</div>
-                        <div class="item"><i class="fas fa-lightbulb"></i> IntelliJ IDEA</div>
-                    </div>
                 </div>
-
+            </div>
+        </section>
     </main>
 
-    <footer id="contacto" class="footer">
-        <div class="container-footer">
-            <div class="contacto">
-                <a href="https://github.com/MrFackry" target="_blank">
-                    <i class="fa-brands fa-github"></i>
+    <!-- Footer -->
+    <footer id="contacto" class="bg-dark text-light py-4">
+        <div class="container text-center">
+            <h2>Contacto</h2>
+            <div>
+                <a href="https://github.com/MrFackry" target="_blank" class="text-light me-3">
+                    <i class="fab fa-github fa-lg"></i>
                 </a>
-                <a href="https://www.linkedin.com/in/daniel-arcos-desarollador-videojuegos/" target="_blank">
-                    <i class="fa-brands fa-linkedin"></i>
+                <a href="https://www.linkedin.com/in/daniel-david-arcos-mosquera/" target="_blank" class="text-light me-3">
+                    <i class="fab fa-linkedin fa-lg"></i>
+                </a>
+                <a href="mailto:daniel.d.arcos05@gmail.com" class="text-light">
+                    <i class="fas fa-envelope fa-lg"></i>
                 </a>
             </div>
-            <div class="copy">
-                <p>&copy; 2025 Daniel. Todos los derechos reservados.</p>
-            </div>
+            <p class="mt-3">&copy; 2025 Daniel Arcos. Todos los derechos reservados.</p>
         </div>
     </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <!-- AOS JS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init();
     </script>
+    <!-- Script personalizado -->
+    <script src="./SCRIPTS/script.js"></script>
 </body>
 
 </html>
