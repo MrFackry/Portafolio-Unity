@@ -2,19 +2,43 @@
 /*-------------------------
 GENERALES
 -------------------------*/
-a,
-button {
+:root {
+    --negro-carbon: #0D0D0D;           /* Fondo, texto */
+    --naranja-quemado: #D35400;        /* Botones, títulos, iconos */
+    --gris-antracita: #2C3E50;         /* Fondo de tarjetas, menús */
+    --beige-claro: #FDF3E7;            /* Fondo de secciones, texto */
+    --naranja-suave: #E67E22;          /* Hover, detalles */
+}
+
+body {
+    background-color: var(--negro-carbon);
+    color: var(--beige-claro);
+    font-family: sans-serif;
+}
+.ver-info.btn.btn-primary{
+    background-color: var(--naranja-quemado);
+    border: var(--naranja-quemado);
+    color: var(--beige-claro);
+}
+.ver-info.btn.btn-primary:hover{
+    background-color: var(--naranja-suave);
+}
+section{
+    background-color: var(--beige-claro);
+}
+a, button {
     transition: all 0.3s ease;
 }
 
 h2 {
     text-align: center;
     padding: 3em;
+    color: var(--naranja-quemado);
 }
 
 #button a {
     text-decoration: none;
-    color: white;
+    color: var(--beige-claro);
 }
 
 .fade-out-on-scroll:not(.aos-animate) {
@@ -27,21 +51,25 @@ HEADER
 .header {
     position: sticky;
     top: 0;
-    /* ¡Esto es obligatorio! */
     z-index: 1000;
-    /* Opcional, para que esté por encima de otros elementos */
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-    background-color: #111;
-    /* Reasegura el fondo al hacer scroll */
+    background-color: var(--negro-carbon);
 }
 
 .Daniel-p {
     font-weight: bold;
-    color: gold;
+    color: var(--naranja-quemado);
 }
 
 .navbar-brand {
-    color: white;
+    color: var(--beige-claro);
+}
+
+.navbar-nav .nav-item a {
+    color: var(--beige-claro);
+}
+.navbar-nav .nav-item a:hover{
+    color: var(--naranja-suave);
 }
 
 /*-------------------------
@@ -50,32 +78,26 @@ CONTENIDO
 .background-inicio {
     position: relative;
     height: 100vh;
-    /* altura de toda la ventana */
     background-image: url('../IMG/unity-6.jpg');
-    /* usa tu imagen real */
     background-size: cover;
     background-position: center;
     display: flex;
-    /*centrar el contenido*/
     justify-content: center;
     align-items: center;
 }
 
 .titulo-i {
     display: flex;
-    width: auto;
     padding: 1em 2em;
-    /*centrar el contenido*/
     text-align: center;
     justify-content: center;
     align-items: center;
-    /*opacidad*/
     background-color: rgba(255, 255, 255, 0.2);
     border-radius: 10px;
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
     border: 1px solid rgba(255, 255, 255, 0.3);
-    color: black;
+    color: var(--negro-carbon);
     font-weight: bold;
     font-size: 3.5rem;
 }
@@ -83,11 +105,15 @@ CONTENIDO
 .titulo-p {
     text-align: center;
     padding: 3em;
+    color: var(--naranja-quemado);
 }
 
 .carousel {
     padding-top: 3em;
+    width: 70%;
+    margin: 0 auto; /* Centra horizontalmente */
 }
+
 
 .carousel-inner img {
     height: 400px;
@@ -96,9 +122,12 @@ CONTENIDO
 
 .ver-info {
     text-decoration: none;
-    color: white;
+    color: var(--beige-claro);
 }
 
+/*-------------------------
+CARDS
+-------------------------*/
 .proyectos-conteiner {
     display: flex;
     justify-content: center;
@@ -107,41 +136,27 @@ CONTENIDO
 }
 
 .card {
-  width: 18rem;
-  display: flex;
-  flex-direction: column;
-  height: 450px; 
+    justify-content: center;
+    background-color: var(--gris-antracita);
+    color: var(--beige-claro);
+    padding: 1rem;
+    border-radius: 10px;
 }
-
-.card-img-top {
-  height: 300px; 
-  width: 100%;
-  object-fit: contain; 
-  background-color: #f0f0f0; 
-}
-
-.card-body {
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 1rem;
-}
-
 
 /*-------------------------
-seccion infromacion
+SECCIÓN INFORMACIÓN
 -------------------------*/
 #sobre-mi {
     padding: 60px 20px;
-    background-color: #f9f9f9;
+    background-color: var(--beige-claro);
     text-align: center;
+    color: var(--negro-carbon);
 }
 
 #sobre-mi h2 {
     font-size: 2.5rem;
     margin-bottom: 40px;
-    color: #333;
+    color: var(--naranja-quemado);
 }
 
 .container-informacion {
@@ -164,14 +179,14 @@ seccion infromacion
     width: 250px;
     max-width: 100%;
     border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
 .text-container {
     flex: 1;
     min-width: 300px;
     text-align: left;
-    color: #444;
+    color: var(--negro-carbon);
     font-size: 1.1rem;
     line-height: 1.6;
 }
@@ -181,12 +196,11 @@ seccion infromacion
     justify-content: center;
     align-items: flex-start;
     gap: 30px;
-    background: #fff;
+    background: var(--beige-claro);
     padding: 30px;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     flex-wrap: wrap;
-    /* por si la pantalla es pequeña */
 }
 
 .columna {
@@ -198,8 +212,8 @@ seccion infromacion
 
 .columna h4 {
     font-size: 1.1rem;
-    color: #111;
-    border-bottom: 2px solid #ddd;
+    color: var(--naranja-quemado);
+    border-bottom: 2px solid var(--naranja-quemado);
     padding-bottom: 4px;
     margin-bottom: 6px;
     text-align: center;
@@ -209,31 +223,30 @@ seccion infromacion
     display: flex;
     align-items: center;
     gap: 8px;
-    background: #f2f2f2;
+    background: var(--gris-antracita);
     padding: 6px 10px;
     border-radius: 8px;
     font-size: 0.95rem;
     justify-content: center;
+    color: var(--beige-claro);
 }
 
 .item i {
     font-size: 1.2rem;
-    color: #555;
+    color: var(--naranja-suave);
 }
 
 /*-------------------------
 FOOTER
 -------------------------*/
 .footer {
-    background-color: aqua;
+    background-color: var(--gris-antracita);
     display: flex;
     justify-content: center;
-    /* Centra horizontalmente */
     align-items: center;
-    /* Centra verticalmente */
     flex-direction: column;
-    /* Apila contenido */
     padding: 20px;
+    color: var(--beige-claro);
 }
 
 .container-footer {
@@ -252,14 +265,14 @@ FOOTER
 
 .contacto a {
     font-size: 2rem;
-    color: black;
+    color: var(--beige-claro);
     text-decoration: none;
     transition: transform 0.3s ease;
 }
 
 .contacto a:hover {
     transform: scale(1.2);
-    color: #333;
+    color: var(--naranja-suave);
 }
 
 .copy {
