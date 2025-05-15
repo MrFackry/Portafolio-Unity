@@ -78,7 +78,7 @@ CONTENIDO
 .background-inicio {
     position: relative;
     height: 100vh;
-    background-image: url('../IMG/unity-6.jpg');
+    background-color: #2C3E50;
     background-size: cover;
     background-position: center;
     display: flex;
