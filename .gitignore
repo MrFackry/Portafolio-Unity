@@ -21,4 +21,5 @@ data/temp/*.json
 output/*.json     
 # Ignora toda la carpeta node_modules    
 node_modules/  
-
+# Ignorar el env
+.env
