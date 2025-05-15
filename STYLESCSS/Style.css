@@ -3,36 +3,83 @@
 GENERALES
 -------------------------*/
 :root {
-    --negro-carbon: #0D0D0D;           /* Fondo, texto */
-    --naranja-quemado: #D35400;        /* Botones, títulos, iconos */
-    --gris-antracita: #2C3E50;         /* Fondo de tarjetas, menús */
-    --beige-claro: #FDF3E7;            /* Fondo de secciones, texto */
-    --naranja-suave: #E67E22;          /* Hover, detalles */
+    --negro-carbon: #0D0D0D;
+    --naranja-quemado: #D35400;
+    --gris-antracita: #2C3E50;
+    --beige-claro: #ffffff;
+    --naranja-suave: #E67E22;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-    background-color: var(--negro-carbon);
-    color: var(--beige-claro);
-    font-family: sans-serif;
+	background: linear-gradient(-45deg, #E67E22, #e4a907, #d48c0f, #b89c12);
+	background-size: 400% 400%;
+	-webkit-animation: gradient 15s ease infinite;
+	        animation: gradient 15s ease infinite;
 }
-.ver-info.btn.btn-primary{
+
+@-webkit-keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.ver-info.btn.btn-primary {
     background-color: var(--naranja-quemado);
     border: var(--naranja-quemado);
     color: var(--beige-claro);
 }
-.ver-info.btn.btn-primary:hover{
+
+.ver-info.btn.btn-primary:hover {
     background-color: var(--naranja-suave);
 }
-section{
-    background-color: var(--beige-claro);
+
+.super-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
 }
-a, button {
+
+section {
+    background-color: var(--beige-claro);
+    width: 100%;
+}
+
+a,
+button {
     transition: all 0.3s ease;
 }
 
 h2 {
     text-align: center;
-    padding: 3em;
+    padding: 2em;
     color: var(--naranja-quemado);
 }
 
@@ -58,9 +105,11 @@ HEADER
 
 .Daniel-p {
     font-weight: bold;
-    color: var(--naranja-quemado);
+    color: var(--beige-claro);
 }
-
+.Daniel-p:hover{
+    color: var(--naranja-suave);
+}
 .navbar-brand {
     color: var(--beige-claro);
 }
@@ -68,22 +117,48 @@ HEADER
 .navbar-nav .nav-item a {
     color: var(--beige-claro);
 }
-.navbar-nav .nav-item a:hover{
+
+.navbar-nav .nav-item a:hover {
     color: var(--naranja-suave);
+}
+
+/*-------------------------
+FONDO
+-------------------------*/
+.super-conteiner {
+    position: relative;
+    z-index: 1;
+    color: white;
+    text-align: center;
+    padding-top: 30vh;
 }
 
 /*-------------------------
 CONTENIDO
 -------------------------*/
-.background-inicio {
-    position: relative;
-    height: 100vh;
-    background-color: #2C3E50;
+.Inicio {
+    text-align: center;
+    padding: 8rem 2rem;
+    background-image: url(./../IMG/Programacion.jpg);
+    background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    color: #fff;
+}
+
+.Inicio .btn {
+    margin-top: 1rem;
+    display: inline-block;
+    background: var(--naranja-quemado);
+    color: var(--beige-claro);
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.Inicio .btn:hover {
+    background-color: var(--naranja-suave);
+    transition: background 0.3s;
 }
 
 .titulo-i {
@@ -110,8 +185,10 @@ CONTENIDO
 
 .carousel {
     padding-top: 3em;
+    padding-bottom: 3em;
     width: 70%;
-    margin: 0 auto; /* Centra horizontalmente */
+    margin: 0 auto;
+    /* Centra horizontalmente */
 }
 
 
@@ -179,7 +256,7 @@ SECCIÓN INFORMACIÓN
     width: 250px;
     max-width: 100%;
     border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .text-container {
@@ -236,6 +313,10 @@ SECCIÓN INFORMACIÓN
     color: var(--naranja-suave);
 }
 
+.item:hover {
+    color: var(--naranja-suave);
+}
+
 /*-------------------------
 FOOTER
 -------------------------*/
@@ -258,12 +339,13 @@ FOOTER
 
 .contacto {
     display: flex;
-    gap: 20px;
+    gap: 10px;
     justify-content: center;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
-.contacto a {
+.contacto a,
+.contactoH2 {
     font-size: 2rem;
     color: var(--beige-claro);
     text-decoration: none;

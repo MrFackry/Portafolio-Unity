@@ -22,7 +22,7 @@
         <nav class="navbar navbar-expand-sm">
             <div class="container-fluid">
                 <h1 class="navbar-brand">
-                    <span class="Daniel-p">Daniel</span> Arcos
+                    <span class="Daniel-p">Daniel Arcos</span>
                 </h1>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -48,14 +48,16 @@
         </nav>
     </header>
 
-    <main>
+    <main class="super-container">
         <!-- Sección Inicio -->
-        <section class="seccion">
-            <div class="background-inicio text-center py-5" data-aos="fade-down">
-                <h1 class="titulo-i">Software Developer</h1>
-            </div>
+        <section id="inicio" class="Inicio">
+            <h1>Hola, soy Daniel</h1>
+            <p>Desarrollador web en formación</p>
+            <a href="#proyectos" class="btn">Ver proyectos</a>
+        </section>
 
-            <!-- Carousel con animación en fade -->
+        <!-- Carousel con animación en fade -->
+        <Section class="my-5">
             <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" data-aos="fade-up">
                 <div class="carousel-indicators">
                     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
@@ -97,8 +99,9 @@
                     <span class="visually-hidden">Siguiente</span>
                 </button>
             </div>
-
-            <!-- Proyectos -->
+        </Section>
+        <!-- Proyectos -->
+        <Section class="my-5">
             <h2 id="proyectos" class="mt-5 mb-4 text-center" data-aos="fade-up">Mis Proyectos</h2>
             <div class="container proyectos-conteiner d-flex justify-content-center flex-wrap gap-4">
                 <div class="card" style="width: 18rem;" data-aos="zoom-in">
@@ -114,45 +117,49 @@
                     </div>
                 </div>
             </div>
-
-            <!-- Prototipos -->
-            <section id="prototipos" class="my-5">
-                <h2 class="text-center mb-4" data-aos="fade-up">Prototipos</h2>
-                <div class="container proyectos-conteiner d-flex justify-content-center flex-wrap gap-4">
-                    <div class="card" style="width: 18rem;" data-aos="fade-up" data-aos-delay="100">
-                        <img src="./IMG/Prototipo-futboll.png" class="card-img-top" alt="Prototipo fútbol" />
-                        <div class="card-body">
-                            <p class="card-text fw-bold">Rol: Game designer</p>
-                            <p>Prototipo para probar movimiento y mecánicas.</p>
-                            <a href="https://fackry.itch.io/futball-balls" target="_blank"
-                                class="btn btn-success">Probar</a>
-                        </div>
-                    </div>
-                    <div class="card" style="width: 18rem;" data-aos="fade-up" data-aos-delay="100">
-                        <img src="./IMG/Prototipo-Globo.png" class="card-img-top" alt="Prototipo globo" />
-                        <div class="card-body">
-                            <p class="card-text fw-bold">Rol: Game designer</p>
-                            <p>Prototipo emulando un Flappy Bird.</p>
-                            <a href="https://fackry.itch.io/globo-basic" target="_blank" class="btn btn-success">Probar</a>
-                        </div>
+        </Section>
+        <!-- Prototipos -->
+        <section id="prototipos" class="my-5">
+            <h2 class="text-center mb-4" data-aos="fade-up">Prototipos</h2>
+            <div class="container proyectos-conteiner d-flex justify-content-center flex-wrap gap-4">
+                <div class="card" style="width: 18rem;" data-aos="fade-up" data-aos-delay="100">
+                    <img src="./IMG/Prototipo-futboll.png" class="card-img-top" alt="Prototipo fútbol" />
+                    <div class="card-body">
+                        <p class="card-text fw-bold">Rol: Game designer</p>
+                        <p>Prototipo para probar movimiento y mecánicas.</p>
+                        <a href="https://fackry.itch.io/futball-balls" target="_blank"
+                            class="btn btn-success">Probar</a>
                     </div>
                 </div>
-            </section>
+                <div class="card" style="width: 18rem;" data-aos="fade-up" data-aos-delay="100">
+                    <img src="./IMG/Prototipo-Globo.png" class="card-img-top" alt="Prototipo globo" />
+                    <div class="card-body">
+                        <p class="card-text fw-bold">Rol: Game designer</p>
+                        <p>Prototipo emulando un Flappy Bird.</p>
+                        <a href="https://fackry.itch.io/globo-basic" target="_blank" class="btn btn-success">Probar</a>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <!-- Sobre mí -->
         <section id="sobre-mi" class="seccion my-5">
             <h2 class="text-center mb-4" data-aos="fade-up">Sobre Mí</h2>
-            <div class="container-informacion container d-flex flex-wrap justify-content-center align-items-center gap-4">
-                <div class="info-principal d-flex flex-column flex-md-row align-items-center gap-4" data-aos="zoom-in-up">
+            <div
+                class="container-informacion container d-flex flex-wrap justify-content-center align-items-center gap-4">
+                <div class="info-principal d-flex flex-column flex-md-row align-items-center gap-4"
+                    data-aos="zoom-in-up">
                     <div class="img-container flex-shrink-0">
-                        <img src="./IMG/Captura de pantalla 2024-12-26 165943.png" alt="Foto Daniel" class="img-fluid rounded" />
+                        <img src="./IMG/Captura de pantalla 2024-12-26 165943.png" alt="Foto Daniel"
+                            class="img-fluid rounded" />
                     </div>
                     <div class="text-container">
                         <p>
                             Soy estudiante de Tecnología en Programación de Sistemas Informáticos, con una fuerte
-                            inclinación hacia el desarrollo backend y una pasión especial por la creación de videojuegos
-                            en Unity. Disfruto construir soluciones de software que resuelvan problemas reales y aporten
+                            inclinación hacia el desarrollo backend y una pasión especial por la creación de
+                            videojuegos
+                            en Unity. Disfruto construir soluciones de software que resuelvan problemas reales y
+                            aporten
                             valor, trabajando con tecnologías como Java, C#, Node.js y JavaScript.
                         </p>
                     </div>
@@ -186,12 +193,13 @@
     <!-- Footer -->
     <footer id="contacto" class="bg-dark text-light py-4">
         <div class="container text-center">
-            <h2>Contacto</h2>
+            <h2 class="contactoH2">Contacto</h2>
             <div>
                 <a href="https://github.com/MrFackry" target="_blank" class="text-light me-3">
                     <i class="fab fa-github fa-lg"></i>
                 </a>
-                <a href="https://www.linkedin.com/in/daniel-david-arcos-mosquera/" target="_blank" class="text-light me-3">
+                <a href="https://www.linkedin.com/in/daniel-david-arcos-mosquera/" target="_blank"
+                    class="text-light me-3">
                     <i class="fab fa-linkedin fa-lg"></i>
                 </a>
                 <a href="mailto:daniel.d.arcos05@gmail.com" class="text-light">
@@ -209,8 +217,6 @@
     <script>
         AOS.init();
     </script>
-    <!-- Script personalizado -->
-    <script src="./SCRIPTS/script.js"></script>
 </body>
 
 </html>
