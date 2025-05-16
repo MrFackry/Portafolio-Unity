@@ -46,7 +46,9 @@ body {
 		background-position: 0% 50%;
 	}
 }
-
+a{
+    text-decoration: none;
+}
 .ver-info.btn.btn-primary {
     background-color: var(--naranja-quemado);
     border: var(--naranja-quemado);
@@ -359,4 +361,29 @@ FOOTER
 
 .copy {
     font-size: 0.9rem;
+}
+
+/*-------------------------
+FOOTER
+-------------------------*/
+#login{
+    border-radius: 12px;
+    width: 30%;
+    box-shadow: 1 5px 9px rgba(13, 13, 13, 0.3);
+    background-image: url(./../IMG/Imagen-log.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#login label{
+    color: var(--beige-claro);
+}
+#login .btn{
+    width: 13.5em;
+}
+#login h2{
+    color: var(--beige-claro);
+}
+.w-50{
+    padding-bottom: 4em;
+    
 }
