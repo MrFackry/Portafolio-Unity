@@ -364,13 +364,13 @@ FOOTER
 }
 
 /*-------------------------
-FOOTER
+LOGIN
 -------------------------*/
 #login{
     border-radius: 12px;
     width: 30%;
     box-shadow: 1 5px 9px rgba(13, 13, 13, 0.3);
-    background-image: url(./../IMG/Imagen-log.png);
+    background-image: url(./../IMG/backgraundlog.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
