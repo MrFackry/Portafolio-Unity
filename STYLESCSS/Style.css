@@ -17,38 +17,45 @@ GENERALES
 }
 
 body {
-	background: linear-gradient(-45deg, #E67E22, #e4a907, #d48c0f, #b89c12);
-	background-size: 400% 400%;
-	-webkit-animation: gradient 15s ease infinite;
-	        animation: gradient 15s ease infinite;
+    background: linear-gradient(-45deg, #FFD700, var(--naranja-suave), #FFC107);
+    /* Añadimos un amarillo */
+    background-size: 300% 300%;
+    -webkit-animation: gradient 5s ease infinite;
+    animation: gradient 5s ease infinite;
 }
 
 @-webkit-keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 @keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
-a{
+
+a {
     text-decoration: none;
 }
+
 .ver-info.btn.btn-primary {
     background-color: var(--naranja-quemado);
     border: var(--naranja-quemado);
@@ -93,7 +100,9 @@ h2 {
 .fade-out-on-scroll:not(.aos-animate) {
     opacity: 0;
 }
-
+p{
+    color: var(--beige-claro);
+}
 /*-------------------------
 HEADER
 -------------------------*/
@@ -103,15 +112,18 @@ HEADER
     z-index: 1000;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
     background-color: var(--negro-carbon);
+    width: 100%;
 }
 
 .Daniel-p {
     font-weight: bold;
     color: var(--beige-claro);
 }
-.Daniel-p:hover{
+
+.Daniel-p:hover {
     color: var(--naranja-suave);
 }
+
 .navbar-brand {
     color: var(--beige-claro);
 }
@@ -146,81 +158,147 @@ CONTENIDO
     background-size: cover;
     color: #fff;
 }
-
-.Inicio .btn {
+/*boton inicio*/
+.btn {
     margin-top: 1rem;
     display: inline-block;
     background: var(--naranja-quemado);
     color: var(--beige-claro);
     padding: 0.75rem 1.5rem;
+    border: 1px none #f39c12;
     border-radius: 5px;
-    text-decoration: none;
-    transition: background 0.3s;
+    cursor: pointer;
+    padding: 10px;
+    box-shadow: 0px 6px 0px #d35400;
+    transition: all 0.1s;
 }
 
-.Inicio .btn:hover {
+.btn:hover {
     background-color: var(--naranja-suave);
     transition: background 0.3s;
 }
 
-.titulo-i {
-    display: flex;
-    padding: 1em 2em;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(255, 255, 255, 0.2);
-    border-radius: 10px;
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    color: var(--negro-carbon);
-    font-weight: bold;
-    font-size: 3.5rem;
+.btn:active {
+  box-shadow: 0px 2px 0px #d35400;
+  position: relative;
+  top: 2px;
 }
-
-.titulo-p {
-    text-align: center;
-    padding: 3em;
-    color: var(--naranja-quemado);
-}
-
+/*carrusel*/
 .carousel {
-    padding-top: 3em;
-    padding-bottom: 3em;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
     width: 70%;
-    margin: 0 auto;
-    /* Centra horizontalmente */
+    margin: 0 auto;/* Centra horizontalmente */
 }
-
 
 .carousel-inner img {
     height: 400px;
-    object-fit: cover;
+    object-fit: fill;
 }
 
 .ver-info {
     text-decoration: none;
     color: var(--beige-claro);
 }
-
-/*-------------------------
-CARDS
--------------------------*/
-.proyectos-conteiner {
+.carousel-control-prev,
+.carousel-control-next {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out, background-color 0.3s ease-in-out, border-radius 0.3s ease-in-out;
+    width: 5%; /* Ajusta según necesites el ancho del área de hover */
+    height: 50%; /* Ajusta la altura del semicírculo */
+    top: 50%;
+    transform: translateY(-50%); /* Centra verticalmente */
+    background: transparent; /* Fondo transparente por defecto */
+    border: none;
+    border-radius: 0; /* Sin bordes redondeados por defecto */
+    font-size: 1.5rem; /* Ajusta el tamaño del texto si decides usarlo */
+    color: white; /* Color del texto si decides usarlo */
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 2rem;
+    cursor: pointer;
 }
 
-.card {
-    justify-content: center;
-    background-color: var(--gris-antracita);
-    color: var(--beige-claro);
-    padding: 1rem;
-    border-radius: 10px;
+.carousel:hover .carousel-control-prev,
+.carousel:hover .carousel-control-next {
+    opacity: 1;
+    background: rgba(0, 0, 0, 0.3); /* Fondo negro semitransparente al hacer hover */
+    border-radius: 0.5rem; /* Añade un poco de redondeo para suavizar */
 }
+
+.carousel:hover .carousel-control-prev {
+    border-radius: 0 1rem 1rem 0; 
+}
+
+.carousel:hover .carousel-control-next {
+    border-radius: 1rem 0 0 1rem; 
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    display: none; /* Aseguramos que los iconos de Bootstrap estén ocultos */
+}
+.carousel-control-prev::before,
+.carousel-control-next::before {
+    opacity: 0; /* Ocultar por defecto */
+    transition: opacity 0.3s ease-in-out;
+}
+
+.carousel:hover .carousel-control-prev::before,
+.carousel:hover .carousel-control-next::before {
+    opacity: 1; /* Mostrar al hacer hover en el carrusel */
+}
+
+/*-------------------------
+CARDS
+-------------------------*/ 
+.proyectos-conteiner{
+    padding-bottom: 10rem;
+}
+.card {
+    width: 190px;
+    height: 100%;
+    background: var(--negro-carbon);
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    display: flex; 
+    flex-direction: column;
+}
+.img-card {
+    height: 100px; 
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    overflow: hidden; /* Para que la imagen no se desborde si no cabe */
+}
+
+#img {
+    max-width: 100%; 
+    max-height: 100%; 
+    object-fit: contain; /* Ajusta la imagen manteniendo su proporción */
+}
+
+.info-card {
+    padding: 1rem; 
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-between;
+    flex-grow: 1;
+}
+
+#rol {
+    margin-bottom: 0.5rem;
+    font-weight: bold; 
+}
+#roles{
+    
+}
+
+#descripcion {
+    font-size: 0.9rem; 
+    margin-bottom: 1rem;
+    flex-grow: 1;
+}
+
 
 /*-------------------------
 SECCIÓN INFORMACIÓN
@@ -261,13 +339,14 @@ SECCIÓN INFORMACIÓN
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-.text-container {
+.text-container p{
     flex: 1;
     min-width: 300px;
     text-align: left;
     color: var(--negro-carbon);
     font-size: 1.1rem;
     line-height: 1.6;
+    color: var(--negro-carbon);
 }
 
 .tecnologias-tabla {
@@ -278,7 +357,7 @@ SECCIÓN INFORMACIÓN
     background: var(--beige-claro);
     padding: 30px;
     border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 6);
     flex-wrap: wrap;
 }
 
@@ -302,7 +381,7 @@ SECCIÓN INFORMACIÓN
     display: flex;
     align-items: center;
     gap: 8px;
-    background: var(--gris-antracita);
+    background: var(--negro-carbon);
     padding: 6px 10px;
     border-radius: 8px;
     font-size: 0.95rem;
@@ -322,8 +401,8 @@ SECCIÓN INFORMACIÓN
 /*-------------------------
 FOOTER
 -------------------------*/
-.footer {
-    background-color: var(--gris-antracita);
+.py-4 {
+    background-color: var(--negro-carbon);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -345,18 +424,14 @@ FOOTER
     justify-content: center;
     margin-bottom: 5px;
 }
-
-.contacto a,
+#icon:hover{
+    transform: scale(1.2);
+    color: var(--naranja-suave);
+}
 .contactoH2 {
     font-size: 2rem;
     color: var(--beige-claro);
     text-decoration: none;
-    transition: transform 0.3s ease;
-}
-
-.contacto a:hover {
-    transform: scale(1.2);
-    color: var(--naranja-suave);
 }
 
 .copy {
@@ -366,7 +441,7 @@ FOOTER
 /*-------------------------
 LOGIN
 -------------------------*/
-#login{
+#login {
     border-radius: 12px;
     width: 30%;
     box-shadow: 1 5px 9px rgba(13, 13, 13, 0.3);
@@ -374,16 +449,20 @@ LOGIN
     background-repeat: no-repeat;
     background-size: cover;
 }
-#login label{
+
+#login label {
     color: var(--beige-claro);
 }
-#login .btn{
+
+#login .btn {
     width: 13.5em;
 }
-#login h2{
+
+#login h2 {
     color: var(--beige-claro);
 }
-.w-50{
+
+.w-50 {
     padding-bottom: 4em;
-    
+
 }
