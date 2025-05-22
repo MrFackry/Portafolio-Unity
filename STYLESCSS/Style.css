@@ -100,9 +100,11 @@ h2 {
 .fade-out-on-scroll:not(.aos-animate) {
     opacity: 0;
 }
-p{
+
+p {
     color: var(--beige-claro);
 }
+
 /*-------------------------
 HEADER
 -------------------------*/
@@ -158,7 +160,10 @@ CONTENIDO
     background-size: cover;
     color: #fff;
 }
-/*boton inicio*/
+
+/*-------------------------
+BUTTOMS
+-------------------------*/
 .btn {
     margin-top: 1rem;
     display: inline-block;
@@ -179,16 +184,20 @@ CONTENIDO
 }
 
 .btn:active {
-  box-shadow: 0px 2px 0px #d35400;
-  position: relative;
-  top: 2px;
+    box-shadow: 0px 2px 0px #d35400;
+    position: relative;
+    top: 2px;
 }
-/*carrusel*/
+
+/*-------------------------
+CARRUSEL
+-------------------------*/
 .carousel {
     padding-top: 3rem;
     padding-bottom: 3rem;
     width: 70%;
-    margin: 0 auto;/* Centra horizontalmente */
+    margin: 0 auto;
+    /* Centra horizontalmente */
 }
 
 .carousel-inner img {
@@ -200,19 +209,27 @@ CONTENIDO
     text-decoration: none;
     color: var(--beige-claro);
 }
+
 .carousel-control-prev,
 .carousel-control-next {
     opacity: 0;
     transition: opacity 0.3s ease-in-out, background-color 0.3s ease-in-out, border-radius 0.3s ease-in-out;
-    width: 5%; /* Ajusta según necesites el ancho del área de hover */
-    height: 50%; /* Ajusta la altura del semicírculo */
+    width: 5%;
+    /* Ajusta según necesites el ancho del área de hover */
+    height: 50%;
+    /* Ajusta la altura del semicírculo */
     top: 50%;
-    transform: translateY(-50%); /* Centra verticalmente */
-    background: transparent; /* Fondo transparente por defecto */
+    transform: translateY(-50%);
+    /* Centra verticalmente */
+    background: transparent;
+    /* Fondo transparente por defecto */
     border: none;
-    border-radius: 0; /* Sin bordes redondeados por defecto */
-    font-size: 1.5rem; /* Ajusta el tamaño del texto si decides usarlo */
-    color: white; /* Color del texto si decides usarlo */
+    border-radius: 0;
+    /* Sin bordes redondeados por defecto */
+    font-size: 1.5rem;
+    /* Ajusta el tamaño del texto si decides usarlo */
+    color: white;
+    /* Color del texto si decides usarlo */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -222,79 +239,90 @@ CONTENIDO
 .carousel:hover .carousel-control-prev,
 .carousel:hover .carousel-control-next {
     opacity: 1;
-    background: rgba(0, 0, 0, 0.3); /* Fondo negro semitransparente al hacer hover */
-    border-radius: 0.5rem; /* Añade un poco de redondeo para suavizar */
+    background: rgba(0, 0, 0, 0.3);
+    /* Fondo negro semitransparente al hacer hover */
+    border-radius: 0.5rem;
+    /* Añade un poco de redondeo para suavizar */
 }
 
 .carousel:hover .carousel-control-prev {
-    border-radius: 0 1rem 1rem 0; 
+    border-radius: 0 1rem 1rem 0;
 }
 
 .carousel:hover .carousel-control-next {
-    border-radius: 1rem 0 0 1rem; 
+    border-radius: 1rem 0 0 1rem;
 }
 
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-    display: none; /* Aseguramos que los iconos de Bootstrap estén ocultos */
+    display: none;
+    /* Aseguramos que los iconos de Bootstrap estén ocultos */
 }
+
 .carousel-control-prev::before,
 .carousel-control-next::before {
-    opacity: 0; /* Ocultar por defecto */
+    opacity: 0;
+    /* Ocultar por defecto */
     transition: opacity 0.3s ease-in-out;
 }
 
 .carousel:hover .carousel-control-prev::before,
 .carousel:hover .carousel-control-next::before {
-    opacity: 1; /* Mostrar al hacer hover en el carrusel */
+    opacity: 1;
+    /* Mostrar al hacer hover en el carrusel */
 }
 
 /*-------------------------
 CARDS
--------------------------*/ 
-.proyectos-conteiner{
+-------------------------*/
+.proyectos-conteiner {
     padding-bottom: 10rem;
 }
+
 .card {
     width: 190px;
     height: 100%;
     background: var(--negro-carbon);
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
-    display: flex; 
+    display: flex;
     flex-direction: column;
 }
+
 .img-card {
-    height: 100px; 
+    height: 100px;
     display: flex;
-    justify-content: center; /* Centra horizontalmente */
-    align-items: center; /* Centra verticalmente */
-    overflow: hidden; /* Para que la imagen no se desborde si no cabe */
+    justify-content: center;
+    /* Centra horizontalmente */
+    align-items: center;
+    /* Centra verticalmente */
+    overflow: hidden;
+    /* Para que la imagen no se desborde si no cabe */
 }
 
 #img {
-    max-width: 100%; 
-    max-height: 100%; 
-    object-fit: contain; /* Ajusta la imagen manteniendo su proporción */
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    /* Ajusta la imagen manteniendo su proporción */
 }
 
 .info-card {
-    padding: 1rem; 
+    padding: 1rem;
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
     justify-content: space-between;
     flex-grow: 1;
 }
 
 #rol {
     margin-bottom: 0.5rem;
-    font-weight: bold; 
-}
-#roles{
-    
+    font-weight: bold;
 }
 
+#roles {}
+
 #descripcion {
-    font-size: 0.9rem; 
+    font-size: 0.9rem;
     margin-bottom: 1rem;
     flex-grow: 1;
 }
@@ -339,7 +367,7 @@ SECCIÓN INFORMACIÓN
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-.text-container p{
+.text-container p {
     flex: 1;
     min-width: 300px;
     text-align: left;
@@ -424,10 +452,12 @@ FOOTER
     justify-content: center;
     margin-bottom: 5px;
 }
-#icon:hover{
+
+#icon:hover {
     transform: scale(1.2);
     color: var(--naranja-suave);
 }
+
 .contactoH2 {
     font-size: 2rem;
     color: var(--beige-claro);
@@ -438,6 +468,62 @@ FOOTER
     font-size: 0.9rem;
 }
 
+/*-------------------------
+SUBMIT PROYECTS
+-------------------------*/
+/* Estilos base similares a la Idea 1 */
+/* Tus estilos existentes para .submit-proyects */
+.submit-proyects {
+    padding: 2rem;
+    display: flex;
+    justify-content: center; /* Centra el contenedor del formulario */
+    align-items: center; /* Centra verticalmente si la sección tiene suficiente altura */
+}
+
+/* Estilos para el contenedor del formulario */
+.contenedor-form-submit-proyects {
+    background: var(--beige-claro);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombreado más suave */
+    max-width: 600px; /* Limita el ancho del formulario */
+    width: 100%;
+}
+
+.contenedor-form-submit-proyects h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--texto-principal); /* Asumiendo que tienes esta variable definida */
+}
+
+.contenedor-form-submit-proyects form {
+    display: grid;
+    gap: 15px;
+}
+
+.contenedor-form-submit-proyects form div {
+    display: flex;
+    flex-direction: column;
+}
+
+.contenedor-form-submit-proyects form label {
+    margin-bottom: 5px;
+    color: var(--texto-secundario); /* Asumiendo que tienes esta variable definida */
+    font-weight: bold;
+}
+
+.contenedor-form-submit-proyects form input[type="url"],
+.contenedor-form-submit-proyects form input[type="text"],
+.contenedor-form-submit-proyects form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+.contenedor-form-submit-proyects form textarea {
+    min-height: 100px;
+}
 /*-------------------------
 LOGIN
 -------------------------*/
