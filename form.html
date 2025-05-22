@@ -74,51 +74,52 @@
         AOS.init();
     </script>
     <script type="module">
-        // Importa las funciones de Firebase desde la CDN
-        import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js';
-        import { getAuth, signInWithEmailAndPassword, onAuthStateChanged } from 'https://www.gstatic.com/firebasejs/9.23.0/firebase-auth.js';
+    // Importa las funciones de Firebase desde la CDN
+    import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js';
+    import { getAuth, signInWithEmailAndPassword, onAuthStateChanged } from 'https://www.gstatic.com/firebasejs/9.23.0/firebase-auth.js';
 
-       const firebaseConfig = {
-            apiKey: "AIzaSyD-J1wgnPZ__U9ezITOWVdCCdtSjTimcA4",
-            authDomain: "portafolio-game.firebaseapp.com",
-            databaseURL: "https://portafolio-game-default-rtdb.firebaseio.com",
-            projectId: "portafolio-game",
-            storageBucket: "portafolio-game.firebasestorage.app",
-            messagingSenderId: "1010002781956",
-            appId: "1:1010002781956:web:17e6fb111ff5a225ead251"
+   const firebaseConfig = {
+        apiKey: "AIzaSyD-J1wgnPZ__U9ezITOWVdCCdtSjTimcA4",
+        authDomain: "portafolio-game.firebaseapp.com",
+        databaseURL: "https://portafolio-game-default-rtdb.firebaseio.com",
+        projectId: "portafolio-game",
+        storageBucket: "portafolio-game.firebasestorage.app",
+        messagingSenderId: "1010002781956",
+        appId: "1:1010002781956:web:17e6fb111ff5a225ead251"
+    }
+
+    // Inicializa Firebase
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+
+    const loginForm = document.getElementById('loginForm');
+
+    loginForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const email = loginForm.email.value;
+        const password = loginForm.password.value;
+
+        try {
+            await signInWithEmailAndPassword(auth, email, password);
+            console.log('Usuario inició sesión correctamente');
+            window.location.href = 'index.html'; // Redirigir tras inicio de sesión exitoso
+        } catch (error) {
+            alert('Error al iniciar sesión: ' + error.message);
+            console.error('Error al iniciar sesión:', error);
         }
+    });
 
-        // Inicializa Firebase
-        const app = initializeApp(firebaseConfig);
-        const auth = getAuth(app);
+    //Escucha cambios en el estado de autenticación en la pagina de inicio de sesión
+    onAuthStateChanged(auth, (user) => {
+        if (user) {
+            console.log("Usuario ya autenticado, redirigiendo...");
+            window.location.href = 'index.html'; // Redirigir si ya está logueado
+        } else {
+            console.log("Usuario no autenticado en la página de inicio de sesión.");
+        }
+    });
+</script>
 
-        const loginForm = document.getElementById('loginForm');
-
-        loginForm.addEventListener('submit', async (e) => {
-            e.preventDefault();
-            const email = loginForm.email.value;
-            const password = loginForm.password.value;
-
-            try {
-                await signInWithEmailAndPassword(auth, email, password);
-                console.log('Usuario inició sesión correctamente');
-                window.location.href = 'index.html'; // Redirigir tras inicio de sesión exitoso
-            } catch (error) {
-                alert('Error al iniciar sesión: ' + error.message);
-                console.error('Error al iniciar sesión:', error);
-            }
-        });
-
-        //Escucha cambios en el estado de autenticación en la pagina de inicio de sesión
-        onAuthStateChanged(auth, (user) => {
-            if (user) {
-                console.log("Usuario ya autenticado, redirigiendo...");
-                window.location.href = 'index.html'; // Redirigir si ya está logueado
-            } else {
-                console.log("Usuario no autenticado en la página de inicio de sesión.");
-            }
-        });
-    </script>
 </body>
 
 </html>

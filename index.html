@@ -262,7 +262,7 @@
         const app = initializeApp(firebaseConfig);
         const auth = getAuth(app);
 
-        const subirSeccion = document.getElementById("subir");
+        const subirSeccion = document.getElementById("subirSeccion");
 
         onAuthStateChanged(auth, (user) => {
             if (user) {
@@ -270,17 +270,11 @@
                     subirSeccion.style.display = "block";
                 }
             } else {
-
                 if (subirSeccion) {
                     subirSeccion.style.display = "none";
                 }
             }
         });
-
-
-        if (subirSeccion) {
-            subirSeccion.style.display = "none";
-        }
     </script>
     <!--app-->
     <script src="app.js"></script>
