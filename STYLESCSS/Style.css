@@ -471,8 +471,7 @@ FOOTER
 /*-------------------------
 SUBMIT PROYECTS
 -------------------------*/
-/* Estilos base similares a la Idea 1 */
-/* Tus estilos existentes para .submit-proyects */
+
 .submit-proyects {
     padding: 2rem;
     display: flex;
@@ -485,7 +484,7 @@ SUBMIT PROYECTS
     background: var(--beige-claro);
     padding: 30px;
     border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombreado más suave */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
     max-width: 600px; /* Limita el ancho del formulario */
     width: 100%;
 }
@@ -493,7 +492,7 @@ SUBMIT PROYECTS
 .contenedor-form-submit-proyects h2 {
     text-align: center;
     margin-bottom: 20px;
-    color: var(--texto-principal); /* Asumiendo que tienes esta variable definida */
+    color: var(--texto-principal); 
 }
 
 .contenedor-form-submit-proyects form {
@@ -508,7 +507,7 @@ SUBMIT PROYECTS
 
 .contenedor-form-submit-proyects form label {
     margin-bottom: 5px;
-    color: var(--texto-secundario); /* Asumiendo que tienes esta variable definida */
+    color: var(--texto-secundario);
     font-weight: bold;
 }
 
