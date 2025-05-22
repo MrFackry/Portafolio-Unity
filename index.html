@@ -3,227 +3,155 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- SEO -->
     <meta name="description" content="Portafolio de Daniel Arcos, desarrollador web." />
     <meta name="keywords" content="portafolio, desarrollador web, proyectos, HTML, CSS, JavaScript, Daniel, Arcos" />
+    <link rel="stylesheet" href="css.css">
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="./STYLESCSS/Style.css" />
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
     <!-- AOS CSS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <title>Portafolio Daniel</title>
 </head>
-
 <body>
     <header class="header">
         <nav class="navbar navbar-expand-sm">
-            <div class="container-fluid">
-                <h1 class="navbar-brand">
-                    <a href="form.html" class="Daniel-p">Daniel Arcos</a>
-                </h1>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#proyectos">Proyectos</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#prototipos">Prototipos</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#sobre-mi">Sobre mí</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#contacto">Información</a>
-                        </li>
-                    </ul>
-                </div>
+            <div class="container">
+                <a class="navbar-brand" href="form.html">Daniel Arcos</a>
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#proyectos">Proyectos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#prototipos">Prototipos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#sobre-mi">Sobre mi</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contacto">Contacto</a>
+                    </li>
+                </ul>
             </div>
         </nav>
     </header>
-
-    <main class="super-container">
-        <section id="inicio" class="Inicio">
-            <h1>Hola, soy Daniel</h1>
+    <section id="hero" class="hero">
+        <div class="container">
+            <h1 class="hero-title">Hola, soy Daniel</h1>
             <p>software y Game Developer</p>
-            <a href="#proyectos" class="btn">Ver proyectos</a>
-        </section>
-
-        <Section class="my-5">
-            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" data-aos="fade-up">
-                <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
-                        class="active" aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-                        aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-                        aria-label="Slide 3"></button>
-                </div>
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="./IMG/0.1.0-alpha.png" class="d-block w-100" alt="Proyecto 1" />
-                        <div class="carousel-caption d-none d-md-block">
-                            <a class="ver-info btn" href="#">Ver info</a>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <img src="./IMG/Portada.jpg" class="d-block w-100" alt="Proyecto 2" />
-                        <div class="carousel-caption d-none d-md-block">
-                            <a class="ver-info btn" href="#">Ver info</a>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <img src="./IMG/e7a24acf-a2ca-475a-b3d8-c5994a873794.png" class="d-block w-100"
-                            alt="Proyecto 3" />
-                        <div class="carousel-caption d-none d-md-block">
-                            <a class="ver-info btn" href="#">Ver info</a>
-                        </div>
-                    </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
-                    data-bs-slide="prev">
-                    <span class="visually-hidden">Anterior</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
-                    data-bs-slide="next">
-                    <span class="visually-hidden">Siguiente</span>
-                </button>
+            <div>
+                <a href="#proyectos" class="button">Ver proyectos</a>
+                <a href="#proyectos" class="button">Descargar CV</a>
             </div>
-        </Section>
-        <Section class="my-5">
-            <h2 id="proyectos" class="mt-5 mb-4 text-center" data-aos="fade-up">Mis Proyectos</h2>
-            <div class="container proyectos-conteiner d-flex justify-content-center flex-wrap gap-4">
+
+        </div>
+    </section>
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <h2 id="proyectos" data-aos="fade-up">Proyectos</h2>
+            <div class="separator"></div>
+            <div class="portfolio-grid">
                 <div id="contenedorTarjetasProyectos">
-
-                </div>
-                <div class="card" data-aos="fade-up">
-                    <div class="img-card">
-                        <img id="img" src="./IMG/0.1.0-alpha.png" alt="">
-                    </div>
-                    <div class="info-card">
-                        <p id="rol">Rol:</p>
-                        <p id="roles">ssssss</p>
-                        <p id="descripcion">sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss</p>
-                        <a href="" class="btn"></a>
-                    </div>
                 </div>
             </div>
-        </Section>
-        <section class="my-5">
-            <h2 id="prototipos" class="text-center mb-4" data-aos="fade-up">Prototipos</h2>
-            <div class="container proyectos-conteiner d-flex justify-content-center flex-wrap gap-4">
+        </div>
+        <div class="container">
+            <h2 id="prototipos" data-aos="fade-up">Prototipos</h2>
+            <div class="separator"></div>
+            <div class="portfolio-grid">
                 <div id="contenedorTarjetasPrototipos">
                 </div>
-                <div class="card" data-aos="fade-up">
-                    <div class="img-card">
-                        <img id="img" src="" alt="">
-                    </div>
-                    <div class="info-card">
-                        <p id="rol">Rol:</p>
-                        <p id="roles"></p>
-                        <p id="descripcion"></p>
-                        <a href="" class="btn"></a>
-                    </div>
+            </div>
+        </div>
+    </section>
+    <section id="sobre-mi" class="seccion my-5">
+        <div class="container-informacion container d-flex flex-wrap justify-content-center align-items-center gap-4">
+            <div class="info-principal d-flex flex-column flex-md-row align-items-center gap-4" data-aos="zoom-in-up">
+                <div class="img-container flex-shrink-0">
+                    <img src="./IMG/Captura de pantalla 2024-12-26 165943.png" alt="Foto Daniel"
+                        class="img-fluid rounded" />
+                </div>
+                <div class="text-container">
+                    <h2 class="text-center mb-4" data-aos="fade-up">Sobre Mí</h2>
+                    <p>
+                        Soy estudiante de Tecnología en Programación de Sistemas Informáticos, con una fuerte
+                        inclinación hacia el desarrollo backend y una pasión especial por la creación de
+                        videojuegos
+                        en Unity. Disfruto construir soluciones de software que resuelvan problemas reales y
+                        aporten
+                        valor, trabajando con tecnologías como Java, C#, Node.js y JavaScript.
+                    </p>
                 </div>
             </div>
-        </section>
-
-        <section id="sobre-mi" class="seccion my-5">
-            <h2 class="text-center mb-4" data-aos="fade-up">Sobre Mí</h2>
-            <div
-                class="container-informacion container d-flex flex-wrap justify-content-center align-items-center gap-4">
-                <div class="info-principal d-flex flex-column flex-md-row align-items-center gap-4"
-                    data-aos="zoom-in-up">
-                    <div class="img-container flex-shrink-0">
-                        <img src="./IMG/Captura de pantalla 2024-12-26 165943.png" alt="Foto Daniel"
-                            class="img-fluid rounded" />
-                    </div>
-                    <div class="text-container">
-                        <p>
-                            Soy estudiante de Tecnología en Programación de Sistemas Informáticos, con una fuerte
-                            inclinación hacia el desarrollo backend y una pasión especial por la creación de
-                            videojuegos
-                            en Unity. Disfruto construir soluciones de software que resuelvan problemas reales y
-                            aporten
-                            valor, trabajando con tecnologías como Java, C#, Node.js y JavaScript.
-                        </p>
-                    </div>
+            <div class="tecnologias-tabla d-flex justify-content-around flex-wrap gap-3 mt-4" data-aos="fade-left">
+                <div class="columna text-center">
+                    <h4>Lenguajes</h4>
+                    <div class="item"><i class="fab fa-java"></i> Java</div>
+                    <div class="item"><i class="fab fa-js"></i> JavaScript</div>
+                    <div class="item"><i class="fas fa-code"></i> C#</div>
                 </div>
-
-                <div class="tecnologias-tabla d-flex justify-content-around flex-wrap gap-3 mt-4" data-aos="fade-left">
-                    <div class="columna text-center">
-                        <h4>Lenguajes</h4>
-                        <div class="item"><i class="fab fa-java"></i> Java</div>
-                        <div class="item"><i class="fab fa-js"></i> JavaScript</div>
-                        <div class="item"><i class="fas fa-code"></i> C#</div>
-                    </div>
-                    <div class="columna text-center">
-                        <h4>Bases de Datos</h4>
-                        <div class="item"><i class="fas fa-database"></i> MySQL</div>
-                    </div>
-                    <div class="columna text-center">
-                        <h4>Control de Versiones</h4>
-                        <div class="item"><i class="fab fa-github"></i> GitHub</div>
-                    </div>
-                    <div class="columna text-center">
-                        <h4>Frameworks</h4>
-                        <div class="item"><i class="fas fa-project-diagram"></i> Spring</div>
-                        <div class="item"><i class="fab fa-node-js"></i> Node.js</div>
-                    </div>
+                <div class="columna text-center">
+                    <h4>Bases de Datos</h4>
+                    <div class="item"><i class="fas fa-database"></i> MySQL</div>
+                </div>
+                <div class="columna text-center">
+                    <h4>Control de Versiones</h4>
+                    <div class="item"><i class="fab fa-github"></i> GitHub</div>
+                </div>
+                <div class="columna text-center">
+                    <h4>Frameworks</h4>
+                    <div class="item"><i class="fas fa-project-diagram"></i> Spring</div>
+                    <div class="item"><i class="fab fa-node-js"></i> Node.js</div>
                 </div>
             </div>
-        </section>
-        <section class="submit-proyects" id="subirSeccion">
-            <div class="contenedor-form-submit-proyects">
-                <h2>Crear Nueva Tarjeta proyectos</h2>
-                <form id="cardForm">
-                    <div>
-                        <label for="imageUrl">URL de la Imagen:</label>
-                        <input type="url" id="imageUrl" name="imageUrl" required>
-                    </div>
-                    <div>
-                        <label for="rolText">Rol:</label>
-                        <input type="text" id="rolText" name="rolText" required>
-                    </div>
-                    <div>
-                        <label for="descripcionText">Descripción:</label>
-                        <textarea id="descripcionText" name="descripcionText"></textarea>
-                    </div>
-                    <div>
-                        <label for="linkUrl">Enlace del Botón:</label>
-                        <input type="url" id="linkUrl" name="linkUrl">
-                    </div>
-                    <div>
-                        <label for="buttonText">Texto del Botón:</label>
-                        <input type="text" id="buttonText" name="buttonText" value="Ver más">
-                    </div>
-                    <div>
-                        <label for="tipoTarjeta">Tipo de Tarjeta:</label>
-                        <select id="tipoTarjeta" name="tipoTarjeta">
-                            <option value="proyectos">Proyectos</option>
-                            <option value="prototipos">Prototipos</option>
-                        </select>
-                    </div>
-                    <button class="btn" type="button" onclick="crearTarjeta()">Crear Tarjeta</button>
-                </form>
-            </div>
-        </section>
-    </main>
-
+        </div>
+    </section>
+    <section class="submit-proyects" id="subirSeccion">
+        <div class="contenedor-form-submit-proyects">
+            <h2>Crear Nueva Tarjeta proyectos</h2>
+            <form id="cardForm">
+                <div>
+                    <label for="imageUrl">URL de la Imagen:</label>
+                    <input type="url" id="imageUrl" name="imageUrl" required>
+                </div>
+                <div>
+                    <label for="rolText">Rol:</label>
+                    <input type="text" id="rolText" name="rolText" required>
+                </div>
+                <div>
+                    <label for="descripcionText">Descripción:</label>
+                    <textarea id="descripcionText" name="descripcionText"></textarea>
+                </div>
+                <div>
+                    <label for="linkUrl">Enlace del Botón:</label>
+                    <input type="url" id="linkUrl" name="linkUrl">
+                </div>
+                <div>
+                    <label for="buttonText">Texto del Botón:</label>
+                    <input type="text" id="buttonText" name="buttonText" value="Ver más">
+                </div>
+                <div>
+                    <label for="tipoTarjeta">Tipo de Tarjeta:</label>
+                    <select id="tipoTarjeta" name="tipoTarjeta">
+                        <option value="proyectos">Proyectos</option>
+                        <option value="prototipos">Prototipos</option>
+                    </select>
+                </div>
+                <button class="btn" type="button" onclick="crearTarjeta()">Crear Tarjeta</button>
+            </form>
+        </div>
+    </section>
     <footer id="contacto" class="py-4">
         <div class="container-fluid text-center">
             <h2 class="contactoH2">Contacto</h2>
             <a href="https://github.com/MrFackry" target="_blank" class="text-light me-3">
                 <i id="icon" class="fab fa-github fa-lg"></i>
             </a>
-            <a href="https://www.linkedin.com/in/daniel-david-arcos-mosquera/" target="_blank" class="text-light me-3">
+            <a href="https://www.linkedin.com/in/daniel-arcos-desarollador-videojuegos/" target="_blank" class="text-light me-3">
                 <i id="icon" class="fab fa-linkedin fa-lg"></i>
             </a>
             <a href="mailto:daniel.d.arcos05@gmail.com" class="text-light">
@@ -232,12 +160,8 @@
             <p class="mt-3">&copy; 2025 Daniel Arcos. Todos los derechos reservados.</p>
         </div>
     </footer>
-
-
-
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
     <!-- AOS JS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
@@ -247,7 +171,6 @@
     <script type="module">
         import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js';
         import { getAuth, onAuthStateChanged } from 'https://www.gstatic.com/firebasejs/9.23.0/firebase-auth.js';
-
         const firebaseConfig = {
             apiKey: "AIzaSyD-J1wgnPZ__U9ezITOWVdCCdtSjTimcA4",
             authDomain: "portafolio-game.firebaseapp.com",
@@ -257,7 +180,6 @@
             messagingSenderId: "1010002781956",
             appId: "1:1010002781956:web:17e6fb111ff5a225ead251"
         };
-
         // Initialize Firebase
         const app = initializeApp(firebaseConfig);
         const auth = getAuth(app);
@@ -279,5 +201,4 @@
     <!--app-->
     <script src="app.js"></script>
 </body>
-
 </html>

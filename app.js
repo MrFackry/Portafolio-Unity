@@ -9,7 +9,7 @@ function crearTarjeta() {
             const contenedorTarjetas = document.getElementById(contenedorTarjetasId);
 
             const cardDiv = document.createElement('div');
-            cardDiv.classList.add('card');
+            cardDiv.classList.add('cards');
             cardDiv.setAttribute('data-aos', 'fade-up');
 
             const imgCardDiv = document.createElement('div');
@@ -33,7 +33,7 @@ function crearTarjeta() {
             descripcionP.textContent = descripcionText;
             const enlaceA = document.createElement('a');
             enlaceA.href = linkUrl;
-            enlaceA.classList.add('btn');
+            enlaceA.classList.add('button');
             enlaceA.textContent = buttonText;
 
             infoCardDiv.appendChild(rolP);

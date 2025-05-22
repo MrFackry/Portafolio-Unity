@@ -1,110 +1,43 @@
-/*CSS*/
-/*-------------------------
-GENERALES
--------------------------*/
-:root {
-    --negro-carbon: #0D0D0D;
-    --naranja-quemado: #D35400;
-    --gris-antracita: #2C3E50;
-    --beige-claro: #ffffff;
-    --naranja-suave: #E67E22;
-}
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+:root {
+    /* Colores Primarios (Inspirados en el fondo) */
+    --amarillo-principal: #FFD700;       /* Amarillo brillante del inicio del degradado */
+    --naranja-suave: #FFA000;          /* Naranja suave del medio del degradado */
+    --naranja-oscuro: #FFC107;          /* Naranja más oscuro del final del degradado */
+    /* Colores Neutros (Para texto, fondos de sección, separadores) */
+    --gris-claro: #f8f9fa;              /* Fondo claro para secciones (similar al de la página de ejemplo) */
+    --gris-medio: #ccc;                  /* Borde sutil, separador */
+    --texto-claro: #fff;                /* Texto sobre fondos oscuros */
+    --separador-color: #6c757d;          /* Color para los separadores */
+     --naranja-quemado: #D35400;
+     --naranja: #E67E22;
+    /* Otros */
+    --sombra-caja: 0 0.5rem 1rem rgba(0, 0, 0, 0.55); /* Sombra suave para elementos */
 }
 
 body {
-    background: linear-gradient(-45deg, #FFD700, var(--naranja-suave), #FFC107);
-    /* Añadimos un amarillo */
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(-45deg, var(--amarillo-principal), var(--naranja-suave), var(--naranja-oscuro));
     background-size: 300% 300%;
     -webkit-animation: gradient 5s ease infinite;
     animation: gradient 5s ease infinite;
+    color: var(--texto-oscuro);
+    line-height: 1.6;
 }
 
 @-webkit-keyframes gradient {
-    0% {
-        background-position: 0% 50%;
-    }
-
-    50% {
-        background-position: 100% 50%;
-    }
-
-    100% {
-        background-position: 0% 50%;
-    }
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
 @keyframes gradient {
-    0% {
-        background-position: 0% 50%;
-    }
-
-    50% {
-        background-position: 100% 50%;
-    }
-
-    100% {
-        background-position: 0% 50%;
-    }
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
-
-a {
-    text-decoration: none;
-}
-
-.ver-info.btn.btn-primary {
-    background-color: var(--naranja-quemado);
-    border: var(--naranja-quemado);
-    color: var(--beige-claro);
-}
-
-.ver-info.btn.btn-primary:hover {
-    background-color: var(--naranja-suave);
-}
-
-.super-container {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 2rem;
-}
-
-section {
-    background-color: var(--beige-claro);
-    width: 100%;
-}
-
-a,
-button {
-    transition: all 0.3s ease;
-}
-
-h2 {
-    text-align: center;
-    padding: 2em;
-    color: var(--naranja-quemado);
-}
-
-#button a {
-    text-decoration: none;
-    color: var(--beige-claro);
-}
-
-.fade-out-on-scroll:not(.aos-animate) {
-    opacity: 0;
-}
-
-p {
-    color: var(--beige-claro);
-}
-
 /*-------------------------
 HEADER
 -------------------------*/
@@ -116,59 +49,106 @@ HEADER
     background-color: var(--negro-carbon);
     width: 100%;
 }
-
-.Daniel-p {
-    font-weight: bold;
-    color: var(--beige-claro);
-}
-
-.Daniel-p:hover {
-    color: var(--naranja-suave);
+/* Barra de Navegacion */
+.navbar {
+    background-color: rgba(0, 0, 0, 0.9); /* Fondo oscuro semitransparente */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: var(--sombra-caja);
+    display: flex; /* Convertir el navbar en un contenedor flex */
+    justify-content: space-between; /* Espacio entre los elementos hijos */
+    align-items: center; /* Alinear verticalmente los elementos */
 }
 
 .navbar-brand {
-    color: var(--beige-claro);
+    color: var(--texto-claro)!important;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
 }
 
-.navbar-nav .nav-item a {
-    color: var(--beige-claro);
+.navbar-nav {
+    list-style: none;
+    padding: 0;
+    margin: 0; /* Eliminar el margen automático */
+    display: flex;
 }
 
-.navbar-nav .nav-item a:hover {
-    color: var(--naranja-suave);
+.nav-item {
+    margin-left: 1rem; /* Espacio entre los elementos de navegacion */
+}
+
+/* El primer elemento no necesita margen izquierdo */
+.navbar-nav > *:first-child {
+    margin-left: 0;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--texto-claro)!important;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--azul-principal);
+}
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 2rem;
 }
 
 /*-------------------------
-FONDO
+HERO
 -------------------------*/
-.super-conteiner {
-    position: relative;
-    z-index: 1;
-    color: white;
-    text-align: center;
-    padding-top: 30vh;
-}
-
-/*-------------------------
-CONTENIDO
--------------------------*/
-.Inicio {
-    text-align: center;
-    padding: 8rem 2rem;
-    background-image: url(./../IMG/Programacion.jpg);
+.hero {
+    background-color: rgba(var(--gris-claro), 0.8); 
+    padding: 8rem 0;
+    text-align: center; /* Centra el texto de forma predeterminada */
+    background-image: url(./IMG/Programacion.jpg);
+    box-shadow: var(--sombra-caja);
     background-repeat: no-repeat;
     background-size: cover;
-    color: #fff;
+    height: 100vh;
+    display: flex; 
+    flex-direction: column; /* Alinea los elementos internos en columna */
+    justify-content: center; /* Centra verticalmente el contenido */
+    align-items: center; /* Centra horizontalmente el contenido */
 }
 
+.hero-title {
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--texto-claro);
+    margin-bottom: 0.5rem;
+}
+
+.container {
+    font-size: 1.5rem;
+    color: var(--texto-claro);
+    margin-bottom: 1rem;
+    text-align: center; /* Asegura que el texto dentro del container tambien este centrado */
+}
+
+.separator {
+    width: 4rem;
+    height: 0.25rem;
+    background-color: var(--separador-color);
+    margin: 1rem auto; /* Centra horizontalmente el separador */
+}
 /*-------------------------
 BUTTOMS
 -------------------------*/
-.btn {
+.button {
     margin-top: 1rem;
     display: inline-block;
     background: var(--naranja-quemado);
-    color: var(--beige-claro);
+    color: var(--texto-claro);
     padding: 0.75rem 1.5rem;
     border: 1px none #f39c12;
     border-radius: 5px;
@@ -176,102 +156,18 @@ BUTTOMS
     padding: 10px;
     box-shadow: 0px 6px 0px #d35400;
     transition: all 0.1s;
+    text-decoration: none;
 }
-
-.btn:hover {
-    background-color: var(--naranja-suave);
+.button:hover { 
+    background-color: var(--naranja); 
     transition: background 0.3s;
 }
 
-.btn:active {
+.button:active { 
     box-shadow: 0px 2px 0px #d35400;
     position: relative;
     top: 2px;
 }
-
-/*-------------------------
-CARRUSEL
--------------------------*/
-.carousel {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-    width: 70%;
-    margin: 0 auto;
-    /* Centra horizontalmente */
-}
-
-.carousel-inner img {
-    height: 400px;
-    object-fit: fill;
-}
-
-.ver-info {
-    text-decoration: none;
-    color: var(--beige-claro);
-}
-
-.carousel-control-prev,
-.carousel-control-next {
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out, background-color 0.3s ease-in-out, border-radius 0.3s ease-in-out;
-    width: 5%;
-    /* Ajusta según necesites el ancho del área de hover */
-    height: 50%;
-    /* Ajusta la altura del semicírculo */
-    top: 50%;
-    transform: translateY(-50%);
-    /* Centra verticalmente */
-    background: transparent;
-    /* Fondo transparente por defecto */
-    border: none;
-    border-radius: 0;
-    /* Sin bordes redondeados por defecto */
-    font-size: 1.5rem;
-    /* Ajusta el tamaño del texto si decides usarlo */
-    color: white;
-    /* Color del texto si decides usarlo */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-}
-
-.carousel:hover .carousel-control-prev,
-.carousel:hover .carousel-control-next {
-    opacity: 1;
-    background: rgba(0, 0, 0, 0.3);
-    /* Fondo negro semitransparente al hacer hover */
-    border-radius: 0.5rem;
-    /* Añade un poco de redondeo para suavizar */
-}
-
-.carousel:hover .carousel-control-prev {
-    border-radius: 0 1rem 1rem 0;
-}
-
-.carousel:hover .carousel-control-next {
-    border-radius: 1rem 0 0 1rem;
-}
-
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-    display: none;
-    /* Aseguramos que los iconos de Bootstrap estén ocultos */
-}
-
-.carousel-control-prev::before,
-.carousel-control-next::before {
-    opacity: 0;
-    /* Ocultar por defecto */
-    transition: opacity 0.3s ease-in-out;
-}
-
-.carousel:hover .carousel-control-prev::before,
-.carousel:hover .carousel-control-next::before {
-    opacity: 1;
-    /* Mostrar al hacer hover en el carrusel */
-}
-
 /*-------------------------
 CARDS
 -------------------------*/
@@ -279,10 +175,10 @@ CARDS
     padding-bottom: 10rem;
 }
 
-.card {
+.cards {
     width: 190px;
     height: 100%;
-    background: var(--negro-carbon);
+    background: black;
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
     display: flex;
     flex-direction: column;
@@ -291,19 +187,15 @@ CARDS
 .img-card {
     height: 100px;
     display: flex;
-    justify-content: center;
-    /* Centra horizontalmente */
-    align-items: center;
-    /* Centra verticalmente */
-    overflow: hidden;
-    /* Para que la imagen no se desborde si no cabe */
+    justify-content: center;/* Centra horizontalmente */
+    align-items: center;/* Centra verticalmente */
+    overflow: hidden;/* Para que la imagen no se desborde si no cabe */
 }
 
 #img {
     max-width: 100%;
     max-height: 100%;
-    object-fit: contain;
-    /* Ajusta la imagen manteniendo su proporción */
+    object-fit: contain;/* Ajusta la imagen manteniendo su proporción */
 }
 
 .info-card {
@@ -326,22 +218,18 @@ CARDS
     margin-bottom: 1rem;
     flex-grow: 1;
 }
-
-
 /*-------------------------
 SECCIÓN INFORMACIÓN
 -------------------------*/
 #sobre-mi {
     padding: 60px 20px;
-    background-color: var(--beige-claro);
     text-align: center;
-    color: var(--negro-carbon);
 }
 
 #sobre-mi h2 {
     font-size: 2.5rem;
     margin-bottom: 40px;
-    color: var(--naranja-quemado);
+    color: var(--texto-claro);
 }
 
 .container-informacion {
@@ -367,22 +255,27 @@ SECCIÓN INFORMACIÓN
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-.text-container p {
+.text-container  {
     flex: 1;
+    width: 28rem;
+    height: 30rem;
     min-width: 300px;
     text-align: left;
-    color: var(--negro-carbon);
     font-size: 1.1rem;
     line-height: 1.6;
-    color: var(--negro-carbon);
+    background-color: black;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 6);
+    border-radius: 12px;
 }
-
+.text-container p,h2{
+    padding: 2rem;
+}
 .tecnologias-tabla {
     display: flex;
     justify-content: center;
     align-items: flex-start;
     gap: 30px;
-    background: var(--beige-claro);
+    background: black;
     padding: 30px;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 6);
@@ -398,7 +291,7 @@ SECCIÓN INFORMACIÓN
 
 .columna h4 {
     font-size: 1.1rem;
-    color: var(--naranja-quemado);
+    color: var(--texto-claro);
     border-bottom: 2px solid var(--naranja-quemado);
     padding-bottom: 4px;
     margin-bottom: 6px;
@@ -409,34 +302,53 @@ SECCIÓN INFORMACIÓN
     display: flex;
     align-items: center;
     gap: 8px;
-    background: var(--negro-carbon);
     padding: 6px 10px;
     border-radius: 8px;
     font-size: 0.95rem;
     justify-content: center;
-    color: var(--beige-claro);
+    color: var(--texto-claro);
 }
 
 .item i {
     font-size: 1.2rem;
-    color: var(--naranja-suave);
 }
 
 .item:hover {
     color: var(--naranja-suave);
 }
 
+/* Sección Portfolio */
+.portfolio {
+    padding: 6rem 0;
+    text-align: center;
+    background-color: rgba(var(--texto-claro), 0.8);
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.portfolio-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 0.5rem;
+    box-shadow: var(--sombra-caja);
+}
+
 /*-------------------------
 FOOTER
 -------------------------*/
 .py-4 {
-    background-color: var(--negro-carbon);
+    background-color: black;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     padding: 20px;
-    color: var(--beige-claro);
+    color: var(--texto-claro);
 }
 
 .container-footer {
@@ -467,11 +379,10 @@ FOOTER
 .copy {
     font-size: 0.9rem;
 }
-
 /*-------------------------
 SUBMIT PROYECTS
 -------------------------*/
-.submit-proyects
+
 .submit-proyects {
     padding: 2rem;
     display: flex;
