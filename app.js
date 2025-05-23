@@ -41,7 +41,6 @@ async function crearTarjeta() {
     // Obtiene la URL de la imagen directamente del input (que sera llenado por Cloudinary)
     const imageUrl = document.getElementById('imageUrl').value;
     const rolText = document.getElementById('rolText').value;
-    const descripcionText = document.getElementById('descripcionText').value;
     const linkUrl = document.getElementById('linkUrl').value;
     const buttonText = document.getElementById('buttonText').value;
     const tipoTarjeta = document.getElementById('tipoTarjeta').value;
@@ -57,7 +56,6 @@ async function crearTarjeta() {
     const tarjetaData = {
         imageUrl: imageUrl, // Usa la URL obtenida de Cloudinary
         rolText: rolText,
-        descripcionText: descripcionText,
         linkUrl: linkUrl,
         buttonText: buttonText,
         tipoTarjeta: tipoTarjeta,
@@ -96,8 +94,6 @@ function crearTarjetaEnDOM(data, contenedor) {
     rolP.textContent = 'Rol:';
     const rolesP = document.createElement('p');
     rolesP.textContent = data.rolText;
-    const descripcionP = document.createElement('p');
-    descripcionP.textContent = data.descripcionText;
 
     const enlaceA = document.createElement('a');
     enlaceA.href = data.linkUrl;
@@ -107,7 +103,6 @@ function crearTarjetaEnDOM(data, contenedor) {
 
     infoCardDiv.appendChild(rolP);
     infoCardDiv.appendChild(rolesP);
-    infoCardDiv.appendChild(descripcionP);
     infoCardDiv.appendChild(enlaceA);
 
     cardDiv.appendChild(imgCardDiv);
