@@ -1,24 +1,37 @@
-
 :root {
     /* Colores Primarios (Inspirados en el fondo) */
-    --amarillo-principal: #FFD700;       /* Amarillo brillante del inicio del degradado */
-    --naranja-suave: #FFA000;          /* Naranja suave del medio del degradado */
-    --naranja-oscuro: #FFC107;          /* Naranja más oscuro del final del degradado */
+    --amarillo-principal: #FFD700;
+    /* Amarillo brillante del inicio del degradado */
+    --naranja-suave: #FFA000;
+    /* Naranja suave del medio del degradado */
+    --naranja-oscuro: #FFC107;
+    /* Naranja más oscuro del final del degradado */
     /* Colores Neutros (Para texto, fondos de sección, separadores) */
-    --gris-claro: #f8f9fa;              /* Fondo claro para secciones (similar al de la página de ejemplo) */
-    --gris-medio: #ccc;                  /* Borde sutil, separador */
-    --texto-claro: #fff;                /* Texto sobre fondos oscuros */
-    --separador-color: #6c757d;          /* Color para los separadores */
-     --naranja-quemado: #D35400;
-     --naranja: #E67E22;
+    --gris-claro: #f8f9fa;
+    /* Fondo claro para secciones (similar al de la página de ejemplo) */
+    --gris-medio: #ccc;
+    /* Borde sutil, separador */
+    --texto-claro: #fff;
+    /* Texto sobre fondos oscuros */
+    --separador-color: #6c757d;
+    /* Color para los separadores */
+    --naranja-quemado: #D35400;
+    --naranja: #E67E22;
     /* Otros */
-    --sombra-caja: 0 0.5rem 1rem rgba(0, 0, 0, 0.55); /* Sombra suave para elementos */
+    --sombra-caja: 0 0.5rem 1rem rgba(0, 0, 0, 0.55);
+    /* Sombra suave para elementos */
 }
-
+html, body {
+  height: 100%;
+  margin: 0;
+}
 body {
     font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
     background: linear-gradient(-45deg, var(--amarillo-principal), var(--naranja-suave), var(--naranja-oscuro));
     background-size: 300% 300%;
     -webkit-animation: gradient 5s ease infinite;
@@ -28,15 +41,34 @@ body {
 }
 
 @-webkit-keyframes gradient {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 @keyframes gradient {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+main {
+  flex: 1;
 }
 /*-------------------------
 HEADER
@@ -49,22 +81,21 @@ HEADER
     background-color: var(--negro-carbon);
     width: 100%;
 }
+
 /* Barra de Navegacion */
 .navbar {
-    background-color: rgba(0, 0, 0, 0.9); /* Fondo oscuro semitransparente */
-    position: fixed;
+    background-color: rgba(0, 0, 0, 0.9);
+    /* Fondo oscuro semitransparente */
+    height: 5rem;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 1000;
     box-shadow: var(--sombra-caja);
-    display: flex; /* Convertir el navbar en un contenedor flex */
-    justify-content: space-between; /* Espacio entre los elementos hijos */
-    align-items: center; /* Alinear verticalmente los elementos */
 }
 
 .navbar-brand {
-    color: var(--texto-claro)!important;
+    color: var(--texto-claro) !important;
     font-size: 1.5rem;
     font-weight: bold;
     text-decoration: none;
@@ -73,28 +104,40 @@ HEADER
 .navbar-nav {
     list-style: none;
     padding: 0;
-    margin: 0; /* Eliminar el margen automático */
+    margin: 0;
+    /* Eliminar el margen automático */
     display: flex;
 }
 
 .nav-item {
-    margin-left: 1rem; /* Espacio entre los elementos de navegacion */
+    margin-left: 1rem;
+    /* Espacio entre los elementos de navegacion */
 }
 
 /* El primer elemento no necesita margen izquierdo */
-.navbar-nav > *:first-child {
+.navbar-nav>*:first-child {
     margin-left: 0;
 }
 
 .nav-link {
     text-decoration: none;
-    color: var(--texto-claro)!important;
-    font-weight: 500;
+    color: var(--texto-claro) !important;
+    font-size: 1rem !important;
     transition: color 0.3s ease;
 }
 
 .nav-link:hover {
-    color: var(--azul-principal);
+    color: var(--naranja) !important;
+    text-decoration: underline 2px solid var(--naranja);
+    font-size: 1.4rem;
+    transition: 1s;
+}
+
+.nav-link.active {
+    color: var(--naranja) !important;
+    text-decoration: underline 2px solid var(--naranja);
+    font-size: 1.4rem !important;
+    transition: 1s;
 }
 
 .container {
@@ -107,18 +150,22 @@ HEADER
 HERO
 -------------------------*/
 .hero {
-    background-color: rgba(var(--gris-claro), 0.8); 
+    background-color: rgba(var(--gris-claro), 0.8);
     padding: 8rem 0;
-    text-align: center; /* Centra el texto de forma predeterminada */
+    text-align: center;
+    /* Centra el texto de forma predeterminada */
     background-image: url(./IMG/Programacion.jpg);
     box-shadow: var(--sombra-caja);
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
-    display: flex; 
-    flex-direction: column; /* Alinea los elementos internos en columna */
-    justify-content: center; /* Centra verticalmente el contenido */
-    align-items: center; /* Centra horizontalmente el contenido */
+    display: flex;
+    flex-direction: column;
+    /* Alinea los elementos internos en columna */
+    justify-content: center;
+    /* Centra verticalmente el contenido */
+    align-items: center;
+    /* Centra horizontalmente el contenido */
 }
 
 .hero-title {
@@ -132,15 +179,25 @@ HERO
     font-size: 1.5rem;
     color: var(--texto-claro);
     margin-bottom: 1rem;
-    text-align: center; /* Asegura que el texto dentro del container tambien este centrado */
+    text-align: center;
+    /* Asegura que el texto dentro del container tambien este centrado */
+
+}
+
+.hero .container {
+    background-color: rgba(50, 44, 44, 0.844);
+    border-radius: 15px;
+    width: 38rem;
 }
 
 .separator {
     width: 4rem;
     height: 0.25rem;
     background-color: var(--separador-color);
-    margin: 1rem auto; /* Centra horizontalmente el separador */
+    margin: 1rem auto;
+    /* Centra horizontalmente el separador */
 }
+
 /*-------------------------
 BUTTOMS
 -------------------------*/
@@ -158,16 +215,18 @@ BUTTOMS
     transition: all 0.1s;
     text-decoration: none;
 }
-.button:hover { 
-    background-color: var(--naranja); 
+
+.button:hover {
+    background-color: var(--naranja);
     transition: background 0.3s;
 }
 
-.button:active { 
+.button:active {
     box-shadow: 0px 2px 0px #d35400;
     position: relative;
     top: 2px;
 }
+
 /*-------------------------
 CARDS
 -------------------------*/
@@ -187,15 +246,19 @@ CARDS
 .img-card {
     height: 100px;
     display: flex;
-    justify-content: center;/* Centra horizontalmente */
-    align-items: center;/* Centra verticalmente */
-    overflow: hidden;/* Para que la imagen no se desborde si no cabe */
+    justify-content: center;
+    /* Centra horizontalmente */
+    align-items: center;
+    /* Centra verticalmente */
+    overflow: hidden;
+    /* Para que la imagen no se desborde si no cabe */
 }
 
 #img {
     max-width: 100%;
     max-height: 100%;
-    object-fit: contain;/* Ajusta la imagen manteniendo su proporción */
+    object-fit: contain;
+    /* Ajusta la imagen manteniendo su proporción */
 }
 
 .info-card {
@@ -218,6 +281,7 @@ CARDS
     margin-bottom: 1rem;
     flex-grow: 1;
 }
+
 /*-------------------------
 SECCIÓN INFORMACIÓN
 -------------------------*/
@@ -255,7 +319,7 @@ SECCIÓN INFORMACIÓN
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-.text-container  {
+.text-container {
     flex: 1;
     width: 28rem;
     height: 30rem;
@@ -267,9 +331,12 @@ SECCIÓN INFORMACIÓN
     box-shadow: 0 4px 12px rgba(0, 0, 0, 6);
     border-radius: 12px;
 }
-.text-container p,h2{
+
+.text-container p,
+h2 {
     padding: 2rem;
 }
+
 .tecnologias-tabla {
     display: flex;
     justify-content: center;
@@ -379,6 +446,7 @@ FOOTER
 .copy {
     font-size: 0.9rem;
 }
+
 /*-------------------------
 SUBMIT PROYECTS
 -------------------------*/
@@ -386,8 +454,13 @@ SUBMIT PROYECTS
 .submit-proyects {
     padding: 2rem;
     display: flex;
-    justify-content: center; /* Centra el contenedor del formulario */
-    align-items: center; /* Centra verticalmente si la sección tiene suficiente altura */
+    justify-content: center;
+    /* Centra el contenedor del formulario */
+    align-items: center;
+    /* Centra verticalmente si la seccion tiene suficiente altura */
+    background-image: url(./IMG/Portada.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 /* Estilos para el contenedor del formulario */
@@ -395,15 +468,17 @@ SUBMIT PROYECTS
     background: var(--beige-claro);
     padding: 30px;
     border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
-    max-width: 600px; /* Limita el ancho del formulario */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.50);
+    background-color: var(--gris-claro);
+    max-width: 600px;
+    /* Limita el ancho del formulario */
     width: 100%;
 }
 
 .contenedor-form-submit-proyects h2 {
     text-align: center;
     margin-bottom: 20px;
-    color: var(--texto-principal); 
+    color: var(--texto-principal);
 }
 
 .contenedor-form-submit-proyects form {
@@ -434,6 +509,7 @@ SUBMIT PROYECTS
 .contenedor-form-submit-proyects form textarea {
     min-height: 100px;
 }
+
 /*-------------------------
 LOGIN
 -------------------------*/

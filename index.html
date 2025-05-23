@@ -15,8 +15,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
     <!-- AOS CSS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!---->
+    <script src="https://upload-widget.cloudinary.com/global/all.js" type="text/javascript"></script>
     <title>Portafolio Daniel</title>
 </head>
+
 <body>
     <header class="header">
         <nav class="navbar navbar-expand-sm">
@@ -24,16 +27,16 @@
                 <a class="navbar-brand" href="form.html">Daniel Arcos</a>
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#proyectos">Proyectos</a>
+                        <a class="nav-link" id="link-proyectos" href="#proyectos">Proyectos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#prototipos">Prototipos</a>
+                        <a class="nav-link" id="link-prototipos" href="#prototipos">Prototipos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#sobre-mi">Sobre mi</a>
+                        <a class="nav-link" id="link-sobre-mi" href="#sobre-mi">Sobre mi</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#contacto">Contacto</a>
+                        <a class="nav-link" id="link-contacto" href="#contacto">Contacto</a>
                     </li>
                 </ul>
             </div>
@@ -42,15 +45,15 @@
     <section id="hero" class="hero">
         <div class="container">
             <h1 class="hero-title">Hola, soy Daniel</h1>
-            <p>software y Game Developer</p>
+            <p>Software y Game Developer</p>
             <div>
                 <a href="#proyectos" class="button">Ver proyectos</a>
-                <a href="#proyectos" class="button">Descargar CV</a>
+                <a href="./DOCUMENTOS/CV-Daniel Arcos.pdf" class="button">Descargar CV</a>
             </div>
 
         </div>
     </section>
-    <section id="portfolio" class="portfolio">
+    <section id="proyectos" class="portfolio">
         <div class="container">
             <h2 id="proyectos" data-aos="fade-up">Proyectos</h2>
             <div class="separator"></div>
@@ -59,6 +62,8 @@
                 </div>
             </div>
         </div>
+    </section>
+    <section id="prototipos" class="portafolio">
         <div class="container">
             <h2 id="prototipos" data-aos="fade-up">Prototipos</h2>
             <div class="separator"></div>
@@ -116,7 +121,8 @@
             <form id="cardForm">
                 <div>
                     <label for="imageUrl">URL de la Imagen:</label>
-                    <input type="url" id="imageUrl" name="imageUrl" required>
+                    <input type="url" id="imageUrl" name="imageUrl" readonly>
+                    <button class="button" type="button" id="botonSubirImagen">Subir Imagen</button>
                 </div>
                 <div>
                     <label for="rolText">Rol:</label>
@@ -141,7 +147,7 @@
                         <option value="prototipos">Prototipos</option>
                     </select>
                 </div>
-                <button class="btn" type="button" onclick="crearTarjeta()">Crear Tarjeta</button>
+                <button class="button" type="button" id="botonCrearTarjeta">Crear Tarjeta</button>
             </form>
         </div>
     </section>
@@ -151,7 +157,8 @@
             <a href="https://github.com/MrFackry" target="_blank" class="text-light me-3">
                 <i id="icon" class="fab fa-github fa-lg"></i>
             </a>
-            <a href="https://www.linkedin.com/in/daniel-arcos-desarollador-videojuegos/" target="_blank" class="text-light me-3">
+            <a href="https://www.linkedin.com/in/daniel-arcos-desarollador-videojuegos/" target="_blank"
+                class="text-light me-3">
                 <i id="icon" class="fab fa-linkedin fa-lg"></i>
             </a>
             <a href="mailto:daniel.d.arcos05@gmail.com" class="text-light">
@@ -168,37 +175,11 @@
         AOS.init();
     </script>
     <!-- Config y logica -->
-    <script type="module">
-        import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js';
-        import { getAuth, onAuthStateChanged } from 'https://www.gstatic.com/firebasejs/9.23.0/firebase-auth.js';
-        const firebaseConfig = {
-            apiKey: "AIzaSyD-J1wgnPZ__U9ezITOWVdCCdtSjTimcA4",
-            authDomain: "portafolio-game.firebaseapp.com",
-            databaseURL: "https://portafolio-game-default-rtdb.firebaseio.com",
-            projectId: "portafolio-game",
-            storageBucket: "portafolio-game.firebasestorage.app",
-            messagingSenderId: "1010002781956",
-            appId: "1:1010002781956:web:17e6fb111ff5a225ead251"
-        };
-        // Initialize Firebase
-        const app = initializeApp(firebaseConfig);
-        const auth = getAuth(app);
 
-        const subirSeccion = document.getElementById("subirSeccion");
-
-        onAuthStateChanged(auth, (user) => {
-            if (user) {
-                if (subirSeccion) {
-                    subirSeccion.style.display = "block";
-                }
-            } else {
-                if (subirSeccion) {
-                    subirSeccion.style.display = "none";
-                }
-            }
-        });
-    </script>
     <!--app-->
-    <script src="app.js"></script>
+    <script type="module" src="app.js"></script>
+    <!--nav-->
+    <script src="nav.js"></script>
 </body>
+
 </html>
