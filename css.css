@@ -429,6 +429,10 @@ FOOTER
     flex-direction: column;
     padding: 20px;
     color: var(--texto-claro);
+    //arreglo del footer en p107
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }
 
 .container-footer {
