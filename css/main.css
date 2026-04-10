@@ -1,0 +1,85 @@
+/* css/main.css */
+:root {
+    --amarillo-principal: #FFD700;
+    --naranja-suave: #FFA000;
+    --naranja-oscuro: #FFC107;
+    --gris-claro: #f8f9fa;
+    --gris-medio: #ccc;
+    --texto-claro: #fff;
+    --separador-color: #6c757d;
+    --naranja-quemado: #D35400;
+    --naranja: #E67E22;
+    --sombra-caja: 0 0.5rem 1rem rgba(0, 0, 0, 0.55);
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: linear-gradient(-45deg, var(--amarillo-principal), var(--naranja-suave), var(--naranja-oscuro));
+    background-size: 300% 300%;
+    animation: gradient 5s ease infinite;
+    -webkit-animation: gradient 5s ease infinite;
+    color: var(--texto-oscuro);
+    line-height: 1.6;
+}
+
+main, .main-content {
+    flex: 1;
+}
+
+@keyframes gradient {
+    0%   { background-position: 0% 50%; }
+    50%  { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@-webkit-keyframes gradient {
+    0%   { background-position: 0% 50%; }
+    50%  { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 2rem;
+    font-size: 1.5rem;
+    color: var(--texto-claro);
+    text-align: center;
+}
+
+.separator {
+    width: 4rem;
+    height: 0.25rem;
+    background-color: var(--separador-color);
+    margin: 1rem auto;
+}
+
+.button {
+    margin-top: 1rem;
+    display: inline-block;
+    background: var(--naranja-quemado);
+    color: var(--texto-claro);
+    padding: 10px;
+    border: 1px none #f39c12;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0px 6px 0px #d35400;
+    transition: all 0.1s;
+    text-decoration: none;
+}
+
+.button:hover {
+    background-color: var(--naranja);
+    transition: background 0.3s;
+}
+
+.button:active {
+    box-shadow: 0px 2px 0px #d35400;
+    position: relative;
+    top: 2px;
+}
