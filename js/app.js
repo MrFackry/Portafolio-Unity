@@ -3,6 +3,7 @@ import { getDocs } from 'https://www.gstatic.com/firebasejs/9.23.0/firebase-fire
 import { tarjetasCollection } from './fireBase.js';
 import { crearTarjeta, crearTarjetaEnDOM } from './proyecto.js';
 import { mostrarWidgetDeSubida } from './cloudinary.js';
+import { inicializarFiltros } from './filtors.js';
 import './auth.js';
 
 // Esperar a que el DOM esté completamente cargado antes de ejecutar el código
@@ -27,7 +28,8 @@ document.addEventListener('DOMContentLoaded', async () => {
 
         document.getElementById('botonSubirImagen')
             ?.addEventListener('click', mostrarWidgetDeSubida);
-
+        // Inicializar filtros después de cargar las tarjetas    
+        inicializarFiltros();
     } catch (e) {
         console.error("Error en la carga inicial: ", e);
     }

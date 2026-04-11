@@ -427,3 +427,53 @@ LOGIN
 .w-50 {
     padding-bottom: 4em;
 }
+/*-------------------------
+FILTROS
+-------------------------*/
+.categorias {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 1.5rem;
+}
+
+.categoria-btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 5px 14px 5px 8px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    border: 1.5px solid #333;
+    background: #1e1e1e;
+    color: #aaa;
+    transition: all 0.2s;
+}
+
+.categoria-btn.active {
+    background: rgba(230, 126, 34, 0.15);
+    color: #E67E22;
+    border-color: #E67E22;
+}
+
+.categoria-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.dot-todos   { background: #888; }
+.dot-unity   { background: #E67E22; }
+.dot-web     { background: #3B8BD4; }
+.dot-backend { background: #1D9E75; }
+
+.sin-resultados {
+    color: #aaa;
+    font-size: 1rem;
+    text-align: center;
+    padding: 2rem 0;
+    width: 100%;
+}

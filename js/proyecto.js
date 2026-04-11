@@ -45,17 +45,19 @@ async function crearTarjeta() {
 function crearTarjetaEnDOM(data, contenedor) {
     const cardDiv = document.createElement('div');
     cardDiv.classList.add('cards');
+    cardDiv.dataset.categoria = data.categoria || 'sin-categoria'; // ← aquí
     cardDiv.setAttribute('data-aos', 'fade-up');
 
     const categoriaBadge = document.createElement('span');
     categoriaBadge.classList.add('badge-categoria');
-    categoriaBadge.textContent = data.categoria || 'Unity';
+    categoriaBadge.textContent = data.categoria || 'sin-categoria';
 
     const imgCardDiv = document.createElement('div');
     imgCardDiv.classList.add('img-card');
-    const img = document.createElement('img');
+    const img = document.createElement('img'); // ← declarar primero
     img.src = data.imageUrl;
     img.alt = data.rolText;
+    imgCardDiv.appendChild(categoriaBadge);
     imgCardDiv.appendChild(img);
 
     const infoCardDiv = document.createElement('div');
@@ -72,11 +74,10 @@ function crearTarjetaEnDOM(data, contenedor) {
     enlaceA.textContent = data.buttonText;
     enlaceA.target = "_blank";
 
-    
+
     infoCardDiv.appendChild(rolP);
     infoCardDiv.appendChild(rolesP);
     infoCardDiv.appendChild(enlaceA);
-    infoCardDiv.appendChild(categoriaBadge);
     cardDiv.appendChild(imgCardDiv);
     cardDiv.appendChild(infoCardDiv);
     contenedor.appendChild(cardDiv);
