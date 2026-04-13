@@ -71,7 +71,7 @@ HERO
 .hero {
     padding: 8rem 0;
     text-align: center;
-    background-image: url(/assets/img/Programacion.jpg);
+    background-image: url(../assets/img/Programacion.jpg);
     box-shadow: var(--sombra-caja);
     background-repeat: no-repeat;
     background-size: cover;
@@ -352,7 +352,7 @@ SUBMIT PROYECTS
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url(/assets/img/Portada.jpg);
+    background-image: url(../assets/img/Portada.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -407,7 +407,7 @@ LOGIN
     border-radius: 12px;
     width: 30%;
     box-shadow: 1 5px 9px rgba(13, 13, 13, 0.3);
-    background-image: url(/assets/img/backgraundlog.jpg);
+    background-image: url(../assets/img/backgraundlog.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
