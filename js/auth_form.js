@@ -9,4 +9,3 @@ onAuthStateChanged(auth, (user) => {
         subirSeccion.style.display = user ? "block" : "none";
     }
 });
-
