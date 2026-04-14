@@ -1,4 +1,4 @@
-// js/auth.js
+// js/auth_general.js
 import { onAuthStateChanged } from 'https://www.gstatic.com/firebasejs/9.23.0/firebase-auth.js';
 import { auth } from './fireBase.js';
 
