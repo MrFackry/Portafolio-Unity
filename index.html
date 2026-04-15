@@ -29,6 +29,9 @@
                 <a class="navbar-brand" href="form.html">Daniel Arcos</a>
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
+                        <a class="nav-link" id="link-hero" href="#hero">Inicio</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" id="link-proyectos" href="#proyectos">Proyectos</a>
                     </li>
                     <li class="nav-item">
@@ -52,28 +55,32 @@
                 <div>
                     <a href="#proyectos" class="button">Ver proyectos</a>
                     <a href="./assets/docs/CV- Daniel Arcos.pdf" class="button">Descargar CV</a>
+                    <a href="https://www.credly.com/users/daniel-arcos.c8913742/badges" class="button">Ver certificaciones</a>
                 </div>
 
             </div>
         </section>
         <section id="proyectos" class="portfolio">
             <div class="container">
-                <h2 data-aos="fade-up">Proyectos</h2>
-                <div class="separator"></div>
-                <div class="categorias">
-                    <button class="categoria-btn active" data-categoria="todos">
-                        <span class="categoria-dot dot-todos"></span>Todos
-                    </button>
-                    <button class="categoria-btn" data-categoria="Unity">
-                        <span class="categoria-dot dot-unity"></span>Unity
-                    </button>
-                    <button class="categoria-btn" data-categoria="Web">
-                        <span class="categoria-dot dot-web"></span>Web
-                    </button>
-                    <button class="categoria-btn" data-categoria="Backend">
-                        <span class="categoria-dot dot-backend"></span>Backend
-                    </button>
+                <div class="header-proyectos">
+                    <h2 data-aos="fade-up">Proyectos</h2>
+
+                    <div class="categorias">
+                        <button class="categoria-btn active" data-categoria="todos">
+                            <span class="categoria-dot dot-todos"></span>Todos
+                        </button>
+                        <button class="categoria-btn" data-categoria="Unity">
+                            <span class="categoria-dot dot-unity"></span>Unity
+                        </button>
+                        <button class="categoria-btn" data-categoria="Web">
+                            <span class="categoria-dot dot-web"></span>Web
+                        </button>
+                        <button class="categoria-btn" data-categoria="Backend">
+                            <span class="categoria-dot dot-backend"></span>Backend
+                        </button>
+                    </div>
                 </div>
+                <div class="separator"></div>
                 <div class="portfolio-grid">
                     <div id="contenedorTarjetasProyectos"></div>
                 </div>
@@ -81,7 +88,9 @@
         </section>
         <section id="prototipos" class="portafolio">
             <div class="container">
-                <h2 id="prototipos" data-aos="fade-up">Prototipos</h2>
+                <div class="header-prototipos">
+                    <h2 id="prototipos" data-aos="fade-up">Prototipos</h2>
+                </div>
                 <div class="separator"></div>
                 <div class="portfolio-grid">
                     <div id="contenedorTarjetasPrototipos">

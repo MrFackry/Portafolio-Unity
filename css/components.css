@@ -96,10 +96,81 @@ HERO
 }
 
 /*-------------------------
+TITULO-SEPARADOR
+-------------------------*/
+/* Contenedor superior */
+.header-proyectos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* por si en móvil se baja */
+    margin-bottom: 20px;
+}
+
+/* Título */
+.header-proyectos h2, #prototipos h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+}
+
+.header-prototipos{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* por si en móvil se baja */
+    margin-bottom: 20px;
+}
+
+/* Contenedor botones */
+.categorias {
+    display: flex;
+    gap: 10px;
+}
+
+/* Botones tipo pill */
+.categoria-btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    border-radius: 20px;
+    border: 1px solid rgba(255,255,255,0.3);
+    background: transparent;
+    color: white;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Hover */
+.categoria-btn:hover {
+    background: rgba(255,255,255,0.1);
+}
+
+/* Activo */
+.categoria-btn.active {
+    background: rgba(255,255,255,0.2);
+    border-color: white;
+}
+
+/* Punticos de color */
+.categoria-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+}
+
+.dot-todos { background: white; }
+.dot-unity { background: orange; }
+.dot-web { background: #4fc3f7; }
+.dot-backend { background: #66bb6a; }
+
+/*-------------------------
 CARDS
 -------------------------*/
 .proyectos-conteiner {
-    padding: 4rem 1rem;
+    padding: 3rem 1rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;

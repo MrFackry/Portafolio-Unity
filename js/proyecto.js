@@ -46,7 +46,7 @@ function crearTarjetaEnDOM(data, contenedor) {
     const cardDiv = document.createElement('div');
     cardDiv.classList.add('cards');
     cardDiv.dataset.categoria = data.categoria || 'sin-categoria'; // ← aquí
-    cardDiv.setAttribute('data-aos', 'fade-up');
+    //cardDiv.setAttribute('data-aos', 'fade-up');
 
     const categoriaBadge = document.createElement('span');
     categoriaBadge.classList.add('badge-categoria');
